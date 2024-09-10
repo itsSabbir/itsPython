@@ -1,4 +1,4 @@
-# Python Cheat Sheet: Modules and Packages (Detailed Version)
+# Python Cheat Sheet: Modules and Packages
 
 # 1. Importing Modules
 

@@ -1,4 +1,4 @@
-# Python Cheat Sheet: Concurrency and Parallelism (Enhanced Detailed Version)
+# Python Cheat Sheet: Concurrency and Parallelism
 
 import threading
 import multiprocessing

@@ -1,4 +1,4 @@
-# Python Cheat Sheet: Exception Handling (Enhanced Detailed Version)
+# Python Cheat Sheet: Exception Handling
 
 # 1. Basic Try-Except Block
 

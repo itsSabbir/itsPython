@@ -1,4 +1,4 @@
-# Python Cheat Sheet: Object-Oriented Programming (Enhanced Detailed Version)
+# Python Cheat Sheet: Object-Oriented Programming
 
 # 1. Classes and Objects
 

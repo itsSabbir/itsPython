@@ -1,4 +1,4 @@
-# Python Cheat Sheet: Regular Expressions (Enhanced Detailed Version)
+# Python Cheat Sheet: Regular Expressions
 
 import re
 
