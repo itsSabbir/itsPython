@@ -1,4 +1,4 @@
-# Python Cheat Sheet: Advanced Features (Enhanced Detailed Version)
+# Python Cheat Sheet: Advanced Features
 
 import itertools
 import functools
