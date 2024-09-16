@@ -1,3 +1,0 @@
-# Multiprocessing
-
-Content goes here.

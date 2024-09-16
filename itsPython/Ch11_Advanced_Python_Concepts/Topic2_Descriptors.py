@@ -1,3 +1,0 @@
-# Descriptors
-
-Content goes here.

@@ -1,3 +1,0 @@
-# Decorators
-
-Content goes here.
