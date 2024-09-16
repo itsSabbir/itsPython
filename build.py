@@ -176,7 +176,7 @@ for index, (chapter, topics) in enumerate(content_testing_method.items(), start=
     
     # Create topic files within each chapter folder
     for i, topic in enumerate(topics, start=1):
-        topic_file = os.path.join(chapter_folder, f"Topic{i}_{topic.replace(' ', '_').replace('/', '').replace('*', '').replace('-', '').replace('(', '').replace(')', '')}.txt")
+        topic_file = os.path.join(chapter_folder, f"Topic{i}_{topic.replace(' ', '_').replace('/', '').replace('*', '').replace('-', '').replace('(', '').replace(')', '')}.py")
         with open(topic_file, 'w') as f:
             f.write(f"# {topic}\n\nContent goes here.")
 
