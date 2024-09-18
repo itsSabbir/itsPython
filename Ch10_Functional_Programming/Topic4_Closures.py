@@ -1,3 +1,0 @@
-# Closures
-
-Content goes here.

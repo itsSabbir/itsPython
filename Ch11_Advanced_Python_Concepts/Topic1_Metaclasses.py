@@ -1,3 +1,0 @@
-# Metaclasses
-
-Content goes here.
