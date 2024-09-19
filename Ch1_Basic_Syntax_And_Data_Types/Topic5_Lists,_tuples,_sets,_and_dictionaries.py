@@ -614,13 +614,20 @@ def main():
 if __name__ == "__main__":
     main()
 
+# 9. How to Contribute
+
 # To contribute to this cheat sheet:
 # 1. Fork the repository containing this file.
-# 2. Make your changes, ensuring they follow the existing style and structure.
-# 3. Add your name to the list of contributors at the end of the file.
-# 4. Submit a pull request with a clear description of your changes.
+# 2. Make your changes or additions.
+# 3. Ensure all code examples are correct and follow the established style.
+# 4. Add comments explaining new concepts or functions.
+# 5. Update the Table of Contents if necessary.
+# 6. Submit a pull request with a clear description of your changes.
 
-# Contributors:
-# - Claude AI
+# Guidelines for contributions:
+# - Maintain the current format and style.
+# - Provide working code examples for new concepts.
+# - Include performance considerations for new functions.
+# - Add relevant references or citations for advanced topics.
 
 # End of cheat sheet
