@@ -16,7 +16,7 @@ This cheat sheet serves as a comprehensive guide to lists, tuples, sets, and dic
 covering basic concepts to advanced techniques. It's designed for developers of all levels,
 from beginners to senior/principal developers.
 
-Author: Claude AI
+Author: Sabbir
 Date: September 18, 2024
 Python Version: 3.11+
 """
