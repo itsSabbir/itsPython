@@ -42,89 +42,215 @@ Comparison to other languages:
 - Unlike some low-level languages, Python abstracts away the need to consider 
   integer sizes in most cases, simplifying their use.
 
-2. Syntax, Key Concepts, and Code Examples
-=========================================
-Python provides six bitwise operators:
-
-1. & (AND)
-2. | (OR)
-3. ^ (XOR)
-4. ~ (NOT)
-5. << (Left shift)
-6. >> (Right shift)
-
-Let's explore each of these with examples:
 """
 
-import time
-import random
+# ========================================
+# 2. Syntax, Key Concepts, and Code Examples
+# ==========================================
+"""
+Python provides six bitwise operators:
+
+1. & (AND) - Performs a bit-by-bit AND operation.
+2. | (OR) - Performs a bit-by-bit OR operation.
+3. ^ (XOR) - Performs a bit-by-bit exclusive OR operation.
+4. ~ (NOT) - Performs a bitwise negation (inverts all bits).
+5. << (Left shift) - Shifts bits to the left by a specified number of positions.
+6. >> (Right shift) - Shifts bits to the right by a specified number of positions.
+
+These operators are fundamental in low-level programming, such as systems programming, graphics, cryptography, and optimization tasks. 
+They work directly on the binary representation of integers.
+"""
+
+import time  # Provides various time-related functions
+import random  # Used for generating random numbers
 
 def bitwise_and_demo():
     """
     Demonstrates the bitwise AND operator (&).
-    This operator returns 1 if both bits are 1, otherwise 0.
+    This operator compares each bit of its operands. If both bits are 1, the resulting bit is 1; otherwise, it is 0.
     """
-    a = 60  # 0011 1100
-    b = 13  # 0000 1101
-    result = a & b
-    print(f"Bitwise AND of {a} and {b}: {result}")
-    print(f"Binary representation: {bin(result)}")
+    a = 60  # 0011 1100 in binary
+    b = 13  # 0000 1101 in binary
+    result = a & b  # Bitwise AND operation between 'a' and 'b'
+    
+    # Explanation:
+    # 60 in binary: 0011 1100
+    # 13 in binary: 0000 1101
+    # ----------------------
+    # Result       : 0000 1100 (which is 12 in decimal)
+
+    print(f"Bitwise AND of {a} and {b}: {result}")  # Expected output: 12
+    print(f"Binary representation: {bin(result)}")  # bin() converts the result to its binary form, e.g., '0b1100'
     
     # Advanced use: Checking if a number is even
-    num = 42
-    is_even = num & 1 == 0
+    # ------------------------------------------
+    # In binary, even numbers always have a 0 as their least significant bit (LSB). By performing 'num & 1', we can 
+    # check if this bit is 0 (meaning the number is even) or 1 (odd).
+    num = 42  # 42 in binary is 101010
+    is_even = num & 1 == 0  # Evaluates to True because the LSB is 0
     print(f"Is {num} even? {is_even}")
+
+    # Pitfall: Using the bitwise AND (&) on signed integers can yield unexpected results due to two's complement representation.
+    # Always be cautious when performing bitwise operations on negative integers.
 
 def bitwise_or_demo():
     """
     Demonstrates the bitwise OR operator (|).
-    This operator returns 1 if either of the bits is 1, otherwise 0.
+    This operator compares each bit of its operands. If at least one of the bits is 1, the resulting bit is set to 1.
     """
-    a = 60  # 0011 1100
-    b = 13  # 0000 1101
-    result = a | b
-    print(f"Bitwise OR of {a} and {b}: {result}")
-    print(f"Binary representation: {bin(result)}")
+    a = 60  # 0011 1100 in binary
+    b = 13  # 0000 1101 in binary
+    result = a | b  # Bitwise OR operation between 'a' and 'b'
     
+    # Explanation:
+    # 60 in binary: 0011 1100
+    # 13 in binary: 0000 1101
+    # ----------------------
+    # Result       : 0011 1101 (which is 61 in decimal)
+
+    print(f"Bitwise OR of {a} and {b}: {result}")  # Expected output: 61
+    print(f"Binary representation: {bin(result)}")  # Outputs '0b111101', representing 61 in binary
+
     # Advanced use: Setting a specific bit
-    num = 64  # 0100 0000
-    bit_position = 2
-    num_with_bit_set = num | (1 << bit_position)
-    print(f"Setting bit {bit_position} in {num}: {num_with_bit_set}")
+    # ------------------------------------
+    # This technique is commonly used in low-level programming, such as enabling specific features/settings in 
+    # hardware registers or manipulating individual bits in a flag variable.
+    num = 64  # Binary: 0100 0000
+    bit_position = 2  # Refers to the bit we want to set (counting from the right, starting at position 0)
+    
+    # To set a specific bit, we use (1 << bit_position) to create a mask where only the desired bit is set.
+    # Example: (1 << 2) results in 0000 0100
+    num_with_bit_set = num | (1 << bit_position)  # Performs the bitwise OR to set the desired bit
+    
+    # Explanation:
+    # 64 in binary    : 0100 0000
+    # Bitmask (1 << 2): 0000 0100
+    # ---------------------------
+    # Result          : 0100 0100 (which is 68 in decimal)
+
+    print(f"Setting bit {bit_position} in {num}: {num_with_bit_set}")  # Outputs: 68
+
+    # Pitfall: Ensure the bit position is within valid bounds (0 to the number of bits in the datatype). 
+    # Shifting a bit beyond the maximum bit length results in undefined behavior or errors.
+
+# Advanced Insights:
+# - Bitwise operations are extremely efficient because they operate directly on binary representations at the CPU level.
+# - They are often used in performance-critical applications, bit masking, toggling bits, and in areas where memory optimization is paramount.
+# - However, always use them judiciously, as they can reduce code readability if overused or applied without clear context.
+
+# Additional Advanced Tip:
+# Python integers are unbounded (except by memory), meaning they can grow to an arbitrary size. However, it's crucial 
+# to be aware that bitwise operations on very large integers can become computationally expensive, affecting performance.
+
+
+# ========================================
+# Bitwise Operations Demonstrations
+# ---------------------------------------
 
 def bitwise_xor_demo():
     """
     Demonstrates the bitwise XOR operator (^).
-    This operator returns 1 if the bits are different, otherwise 0.
+    The XOR (exclusive OR) operator performs a bit-by-bit comparison between two numbers.
+    It returns '1' if the corresponding bits are different, and '0' if they are the same.
+    This behavior makes it useful for tasks like toggling bits and certain algorithms.
     """
-    a = 60  # 0011 1100
-    b = 13  # 0000 1101
-    result = a ^ b
-    print(f"Bitwise XOR of {a} and {b}: {result}")
-    print(f"Binary representation: {bin(result)}")
+
+    # Basic Example: Bitwise XOR
+    # -------------------------
+    a = 60  # Binary representation: 0011 1100
+    b = 13  # Binary representation: 0000 1101
     
-    # Advanced use: Swapping two numbers without a temporary variable
-    x, y = 10, 20
+    # The bitwise XOR operation compares each bit of 'a' and 'b':
+    # 0011 1100 (a)
+    # 0000 1101 (b)
+    # ---------
+    # 0011 0001 (result) = 49 in decimal
+
+    result = a ^ b  # Performs the bitwise XOR operation
+    print(f"Bitwise XOR of {a} and {b}: {result}")
+    print(f"Binary representation: {bin(result)}")  # 'bin()' returns the binary string representation prefixed by '0b'
+
+    # Advanced Use: Swapping two numbers without a temporary variable
+    # --------------------------------------------------------------
+    # Using the XOR swap algorithm, we can swap two variables' values without needing an extra temporary variable.
+    # This method is efficient in terms of space but may be less readable than traditional swapping, hence 
+    # often used to demonstrate bitwise operations rather than in production code.
+    
+    x, y = 10, 20  # Initialize x and y
     print(f"Before swap: x = {x}, y = {y}")
-    x ^= y
-    y ^= x
-    x ^= y
+
+    # Swapping using XOR
+    x ^= y  # Step 1: x now holds the XOR of x and y
+    y ^= x  # Step 2: y now becomes the original x
+    x ^= y  # Step 3: x now becomes the original y
+    
     print(f"After swap: x = {x}, y = {y}")
+
+    # Advanced Insight: Although this swapping method avoids using a temporary variable, it's not commonly used
+    # in practice because it can be harder to understand and may lead to maintenance challenges.
+    # It's also slower on modern processors than using a simple tuple swap (x, y = y, x) due to lack of readability
+    # and potential issues with integer overflow in some languages (though not in Python).
 
 def bitwise_not_demo():
     """
     Demonstrates the bitwise NOT operator (~).
-    This operator flips all the bits, changing 1 to 0 and 0 to 1.
+    The bitwise NOT operator flips all the bits in a number, turning 1s to 0s and 0s to 1s.
+    It effectively produces the binary complement of the given number.
     """
-    a = 60  # 0011 1100
-    result = ~a
-    print(f"Bitwise NOT of {a}: {result}")
-    print(f"Binary representation: {bin(result & 0xFF)}")  # Masking to show 8 bits
+
+    # Basic Example: Bitwise NOT
+    # -------------------------
+    a = 60  # Binary representation: 0011 1100
     
-    # Advanced use: Finding the two's complement
-    num = 42
-    twos_complement = ~num + 1
+    # The bitwise NOT operation flips all bits:
+    # 0011 1100 (a)
+    # ---------
+    # 1100 0011 (result in a 32-bit system would be represented as -61 in two's complement form)
+
+    result = ~a  # Performs the bitwise NOT operation
+    print(f"Bitwise NOT of {a}: {result}")
+    print(f"Binary representation: {bin(result & 0xFF)}")  # '& 0xFF' masks to display the last 8 bits
+    
+    # Explanation: Python uses signed integers, and the bitwise NOT operation (~) produces a negative result 
+    # due to the two's complement representation. For example, ~60 results in -61 because:
+    # - Original (unsigned 8-bit): 0011 1100 (60)
+    # - Flipped: 1100 0011 -> In two's complement form, this represents -61.
+
+    # Advanced Tip: Using 'result & 0xFF' masks the result to show only the last 8 bits, making it easier
+    # to visualize and understand the bit manipulation in cases where you’re interested in a fixed-width
+    # representation (e.g., working with bytes).
+
+    # Advanced Use: Finding the Two's Complement
+    # -----------------------------------------
+    # The two's complement is a way of representing negative numbers in binary form, widely used in computing.
+    # It can be obtained by inverting the bits using the NOT operator and then adding 1.
+
+    num = 42  # Example positive integer
+    twos_complement = ~num + 1  # Inverting all bits and adding 1 gives the two's complement
+
     print(f"Two's complement of {num}: {twos_complement}")
+
+    # Explanation: The two's complement operation effectively gives the negative representation of 'num'.
+    # In binary:
+    # - num = 42 is '0010 1010'
+    # - ~num = '1101 0101' (flipped bits)
+    # - Adding 1: '1101 0110' represents -42 in two's complement form.
+
+    # Advanced Insight: The two's complement system is widely used because it allows the same hardware to perform
+    # addition and subtraction operations without requiring separate circuitry. This is why understanding bitwise
+    # operations like NOT is crucial for low-level programming, embedded systems, and performance-critical applications.
+
+# Summary
+# -------
+# - Bitwise XOR (^) is useful for toggling bits and swapping values without temporary variables, but be cautious of readability.
+# - Bitwise NOT (~) flips all bits, which is helpful for finding the two's complement and understanding binary representations.
+# - Always consider the implications of bit-level operations, especially how Python's handling of integers differs from other languages.
+# - These demonstrations are valuable for understanding how data is manipulated at a low level and are frequently used
+#   in fields like cryptography, data compression, and performance optimization.
+
+# These comprehensive comments provide insights into the bitwise operations from a beginner's understanding to advanced use cases,
+# preparing the reader to tackle complex problems and optimize code in performance-critical scenarios.
+
 
 def bitwise_shift_demo():
     """
