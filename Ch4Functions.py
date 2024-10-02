@@ -1,6 +1,8 @@
 # Python Cheat Sheet: Functions
 
+#=================================================================================
 # 1. Defining and Calling Functions
+#=================================================================================
 
 # Basic function definition
 def greet(name):
