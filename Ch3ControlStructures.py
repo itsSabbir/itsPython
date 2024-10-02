@@ -1,49 +1,88 @@
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Python Cheat Sheet: Control Structures
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+# Control structures dictate the flow of execution within the program. 
+# They enable the program to make decisions and execute certain sections of code conditionally.
+
+#=================================================================================
 # 1. Conditional Statements
+#=================================================================================
 
 # if statement
-x = 10
-if x > 0:
-    print("x is positive")  # Output: x is positive
+# A simple if statement evaluates the condition and executes the indented block only if the condition is True.
+x = 10  # Here, x is assigned a positive integer value
+if x > 0:  # Condition: Checks if x is greater than 0
+    print("x is positive")  # Output: "x is positive" will be printed since the condition is True
+
+# Key insight:
+# - The condition in an if statement must return a boolean value (True or False).
+# - If x was a non-numeric type like a list or string, ">" could raise a TypeError, so it's crucial to validate types in more complex logic.
 
 # if-else statement
-y = -5
-if y > 0:
-    print("y is positive")
+y = -5  # y is initialized with a negative value
+if y > 0:  # Condition: Checks if y is greater than 0
+    print("y is positive")  # This will not be executed because y is negative
 else:
-    print("y is non-positive")  # Output: y is non-positive
+    print("y is non-positive")  # Output: "y is non-positive" since y is less than or equal to zero
+
+# Advanced tip:
+# - The else block is optional, but it's good practice to include it when handling edge cases.
+# - Best practice: Ensure that both branches of the if-else structure are equally likely to be executed for code readability.
 
 # if-elif-else statement
-z = 0
-if z > 0:
+z = 0  # Assigning z a value of zero for this case
+if z > 0:  # Condition: Checks if z is greater than 0
     print("z is positive")
-elif z < 0:
+elif z < 0:  # Condition: Only evaluated if the first condition is False
     print("z is negative")
-else:
-    print("z is zero")  # Output: z is zero
+else:  # The final condition that will execute if all previous conditions are False
+    print("z is zero")  # Output: "z is zero" because z equals 0
+
+# Insight:
+# - The elif clause allows checking multiple conditions in sequence.
+# - The first true condition will trigger its block, and the rest will be skipped.
+# - If none of the conditions are True, the else block is executed (optional).
 
 # Nested if statements
-num = 15
-if num >= 0:
-    if num == 0:
-        print("num is zero")
+num = 15  # Assigning a positive integer to num
+if num >= 0:  # First condition checks if num is non-negative
+    if num == 0:  # Nested condition: checks if num is exactly zero
+        print("num is zero")  # This block won't be executed
     else:
-        print("num is positive")  # Output: num is positive
+        print("num is positive")  # Output: "num is positive" because num is greater than zero
 else:
-    print("num is negative")
+    print("num is negative")  # Will not be executed as the outer condition is True
+
+# Advanced tip:
+# - While nesting if statements is possible, deeply nested structures can be hard to read and maintain.
+# - Consider using elif instead of nested if statements for cleaner code when multiple exclusive conditions are checked.
 
 # Ternary operator (conditional expression)
-a = 5
-result = "positive" if a > 0 else "non-positive"
-print(result)  # Output: positive
+# A more concise way to handle simple if-else logic.
+a = 5  # Variable a is set to a positive integer
+result = "positive" if a > 0 else "non-positive"  # Conditional expression: evaluates the condition and assigns based on the result
+print(result)  # Output: "positive" because a is greater than 0
+
+# Insight:
+# - This single-line form of if-else is known as a "ternary operator" in Python.
+# - It's ideal for cases where you need a simple decision-making structure with two outcomes.
+# - Avoid overusing this for complex conditions, as it may reduce code clarity.
 
 # Multiple conditions using logical operators
-x, y = 5, 10
-if x > 0 and y < 20:
-    print("Both conditions are true")  # Output: Both conditions are true
+# Logical operators like 'and', 'or', and 'not' can be used to combine multiple conditions.
+x, y = 5, 10  # Assigning values to x and y
+if x > 0 and y < 20:  # Both conditions need to be True for the block to execute
+    print("Both conditions are true")  # Output: "Both conditions are true" because both conditions evaluate to True
 
+# Best practice:
+# - Logical operators are short-circuit operators. For 'and', Python stops evaluating as soon as one condition is False.
+# - Similarly, for 'or', Python stops evaluating if the first condition is True.
+# - This short-circuiting behavior can optimize performance for expensive condition checks.
+
+#=================================================================================
 # 2. Loops
+#=================================================================================
 
 # for loop with range
 for i in range(5):
