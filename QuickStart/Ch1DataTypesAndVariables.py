@@ -1,6 +1,11 @@
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Python Cheat Sheet: Data Types and Variables
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+#=================================================================================
 # 1. Basic Data Types
+#=================================================================================
+
 # Python supports various basic data types, each serving a different purpose and having distinct characteristics.
 # Understanding these data types is essential as they form the foundation of variable manipulation and logic control.
 
@@ -78,8 +83,10 @@ print(var is None)  # Output: True, preferred way to check for None
 # - As a developer progresses, understanding memory management, precision handling, and type compatibility becomes increasingly vital.
 # - This knowledge forms a foundation for advanced topics like data structures, algorithm optimization, and complex software design.
 
-
+#=================================================================================
 # 2. Type Conversion and Casting
+#=================================================================================
+
 # Type conversion is crucial when handling mixed data types, ensuring that operations are compatible or extracting the right values.
 # Python provides built-in functions like int(), float(), str(), and others for converting between data types.
 # Understanding how these conversions work is essential for handling data gracefully, especially in real-world scenarios with diverse input.
@@ -175,8 +182,10 @@ print(f"Chained Conversion (Float -> Int -> String): {chained_conversion}, Type:
 # and always considering edge cases like empty strings, None values, or large numbers.
 
 
-
+#=================================================================================
 # 3. Mutable vs Immutable Data Types
+#=================================================================================
+
 # In Python, data types can be categorized as mutable or immutable. 
 # 'Mutable' means the object can be modified after creation, while 'immutable' means it cannot be changed.
 # It's crucial to understand this concept as it affects memory usage, performance, and overall behavior
@@ -280,8 +289,9 @@ print(f"Tuple after function call: {sample_tuple}")  # Output remains (1, 2, 3)
 # - Always be aware of the implications of mutability in multi-threaded environments, data structures, and function design.
 
 
-
+#=================================================================================
 # 4. Complex Numbers
+#=================================================================================
 
 # Initializing a complex number using the format a + bj, where 'a' is the real part and 'b' is the imaginary part.
 # In Python, 'j' is used instead of 'i' (which is commonly used in mathematics) to represent the imaginary unit.
@@ -380,8 +390,9 @@ print(f"Adding int to complex: {complex_var + 5}")  # Output: (7+3j)
 # 2. Always be cautious of precision errors, especially when performing arithmetic with other floating-point numbers.
 # 3. Use built-in functions like abs(), complex(), and isinstance() to maximize code clarity and efficiency when handling complex numbers.
 
-
+#=================================================================================
 # 5. Variables and Assignment
+#=================================================================================
 
 # Dynamic typing: Python is a dynamically typed language, meaning that a variable can change its data type during execution.
 # This provides flexibility but can introduce bugs if the type isn't managed correctly.
@@ -452,8 +463,9 @@ def example_function():
 example_function()
 print(f"Outer scope variable: {outer_var}")  # This prints the original value, showing how scope isolation works in Python.
 
-
+#=================================================================================
 # 6. Constants
+#=================================================================================
 
 # Python doesn't have a built-in mechanism for defining true constants. 
 # However, it's a widely accepted convention to name constant values in uppercase.
@@ -492,8 +504,9 @@ print(f"Screen dimensions: {WIDTH}x{HEIGHT}")
 # consider using named tuples, dataclasses, or dictionaries for better organization.
 # This provides more structure and makes it clear how values are related, especially in larger codebases.
 
-
+#=================================================================================
 # 7. String Operations
+#=================================================================================
 
 # Concatenation: Combining multiple strings into one. The '+' operator performs string concatenation.
 # Note that strings are immutable, so a new string is created in memory each time this operation is performed.
@@ -549,18 +562,18 @@ print(f"Strip whitespace: {'  spacey  '.strip()}")  # Output: 'spacey'
 
 # f-string (formatted string literals, Python 3.6+): Allows embedding expressions directly within curly braces.
 # This is the most modern and recommended way to handle string formatting due to its readability and efficiency.
-name = "Alice"
+name = "Sabbir"
 age = 30
-print(f"{name} is {age} years old")  # Output: 'Alice is 30 years old'
+print(f"{name} is {age} years old")  # Output: 'Sabbir is 30 years old'
 
 # The .format() method (available since Python 2.7 and 3.0): Uses placeholders and can reorder or format values.
-print("{} is {} years old".format(name, age))  # Output: 'Alice is 30 years old'
+print("{} is {} years old".format(name, age))  # Output: 'Sabbir is 30 years old'
 
 # Advanced tip: The .format() method provides more control, allowing for named placeholders like:
-print("{name} is {age} years old".format(name=name, age=age))  # Output: 'Alice is 30 years old'
+print("{name} is {age} years old".format(name=name, age=age))  # Output: 'Sabbir is 30 years old'
 
 # %-formatting (older style): Inspired by C's printf syntax. Still works but is less recommended in modern code.
-print("%s is %d years old" % (name, age))  # Output: 'Alice is 30 years old'
+print("%s is %d years old" % (name, age))  # Output: 'Sabbir is 30 years old'
 
 # Advanced insight: f-strings are generally faster than the .format() method and %-formatting due to their
 # optimized implementation. However, %-formatting is still occasionally seen in older codebases or when 
@@ -570,8 +583,9 @@ print("%s is %d years old" % (name, age))  # Output: 'Alice is 30 years old'
 # consider using the built-in gettext module instead of basic string formatting,
 # as it provides better support for translations.
 
-
+#=================================================================================
 # 8. Type Hints (Python 3.5+)
+#=================================================================================
 
 # Type hints are annotations that specify the expected data types of function parameters and return values.
 # In this example, 'name' is expected to be of type 'str', and the function is expected to return a 'str'.
@@ -584,7 +598,7 @@ def greet(name: str) -> str:
 # 3. They assist with code auto-completion and documentation in IDEs, enhancing the development experience.
 
 # Example of correct usage
-print(greet("Alice"))  # Works fine because 'Alice' is of type 'str', which matches the expected input.
+print(greet("Sabbir"))  # Works fine because 'Sabbir' is of type 'str', which matches the expected input.
 
 # Example of incorrect usage
 print(greet(123))  # This will still execute without an error because Python does not enforce type hints at runtime.
@@ -614,13 +628,13 @@ def process_user_data(usernames: List[str], details: Dict[str, Tuple[int, str]])
         processed_users.append(f"{username} is {age} years old and {status}")
     return processed_users
 
-usernames_list = ["Alice", "Bob"]
+usernames_list = ["Sabbir", "Bob"]
 user_details = {
-    "Alice": (30, "Active"),
+    "Sabbir": (30, "Active"),
     "Bob": (25, "Inactive")
 }
 
-print(process_user_data(usernames_list, user_details))  # Returns ['Alice is 30 years old and Active', 'Bob is 25 years old and Inactive']
+print(process_user_data(usernames_list, user_details))  # Returns ['Sabbir is 30 years old and Active', 'Bob is 25 years old and Inactive']
 
 # Uncommon insight: When working with nested or complex types (e.g., List[Dict[str, Tuple[int, str]]]),
 # make sure your type hints reflect the structure accurately to prevent misunderstandings and potential logic errors.
@@ -659,7 +673,9 @@ print(optional_greeting())       # Prints 'Hello, stranger!'
 # 2. Utilize 'Optional' when a parameter or return value can be 'None', clarifying the function's intent.
 # 3. 'Any' can be helpful for highly generic code but should be used judiciously to maintain type safety and code clarity.
 
+#=================================================================================
 # 9. Memory Management
+#=================================================================================
 
 import sys  # sys module provides access to system-specific parameters and functions
 
@@ -724,7 +740,9 @@ print(f"Size of numpy array: {sys.getsizeof(np_array)} bytes")  # Typically smal
 # Be aware of Python’s memory model. Understanding reference counting, garbage collection, and the impact of data structures on memory size can greatly enhance performance optimization.
 # This is particularly crucial when dealing with large datasets, high-performance applications, or low-level memory management.
 
+#=================================================================================
 # 10. Additional Data Types
+#=================================================================================
 
 # Tuples (immutable sequences):
 # Tuples are ordered collections that cannot be changed (immutable). They can hold multiple data types, which makes them useful for read-only data.
@@ -746,13 +764,13 @@ print(f"Set: {set_var}, Type: {type(set_var)}")
 # Dictionaries (key-value pairs):
 # Dictionaries are mutable, unordered collections of key-value pairs, allowing for fast lookup, insertion, and deletion based on keys.
 # Keys must be unique and immutable (e.g., strings, numbers, tuples), but values can be of any type and can be mutable.
-dict_var = {'name': 'Alice', 'age': 30, 'city': 'New York'}  # Creating a dictionary with three key-value pairs
+dict_var = {'name': 'Sabbir', 'age': 30, 'city': 'New York'}  # Creating a dictionary with three key-value pairs
 print(f"Dictionary: {dict_var}, Type: {type(dict_var)}")
-# Output: Dictionary: {'name': 'Alice', 'age': 30, 'city': 'New York'}, Type: <class 'dict'>
+# Output: Dictionary: {'name': 'Sabbir', 'age': 30, 'city': 'New York'}, Type: <class 'dict'>
 
 # Accessing values in a dictionary using a key:
 print(f"Accessing dictionary value: {dict_var['name']}")  # Accessing the value associated with the key 'name'
-# Output: Accessing dictionary value: Alice
+# Output: Accessing dictionary value: Sabbir
 # Advanced tip: Use the dict.get(key, default) method instead of direct access to avoid KeyError if the key is not present.
 # For example: dict_var.get('non_existent_key', 'Default Value')
 # Best practice: If iterating over dictionary keys frequently, consider using collections.OrderedDict (Python <3.7) or note that dicts maintain insertion order (Python 3.7+).

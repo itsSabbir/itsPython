@@ -544,7 +544,7 @@ print(f"set1 ^ set2 (symmetric difference): {set1 ^ set2}")  # Output: {1, 2, 5,
 # lookups being optimized to constant time O(1) in average cases.
 
 # Here, we're checking if 'name' is a key in the 'person' dictionary, which returns True.
-person = {'name': 'Alice', 'age': 30}
+person = {'name': 'Sabbir', 'age': 30}
 print(f"'name' in person: {'name' in person}")  # Output: True
 # Checking if a non-existent key 'gender' is present will return False.
 print(f"'gender' in person: {'gender' in person}")  # Output: False
