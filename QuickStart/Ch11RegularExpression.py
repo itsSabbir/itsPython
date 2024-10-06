@@ -113,9 +113,9 @@ if re.search(pattern_case_insensitive, text_case_sensitive, re.IGNORECASE):
 # Mastering their syntax and usage can lead to more efficient and readable string manipulation.
 
 
-#=================================================================================
+#===============================================================================
 # 1. Basic Patterns and Character Classes
-#=================================================================================
+#===============================================================================
 
 # Regular expressions (regex) are powerful tools for pattern matching and text processing.
 # This section covers basic matching and character classes.
@@ -176,9 +176,9 @@ print("Non-digits:", re.findall(not_digit_pattern, text))  # Output: ['T', 'h', 
 # Character classes can dramatically simplify regex patterns, improve performance, 
 # and make your code easier to understand and maintain.
 
-#=================================================================================
+#===============================================================================
 # 2. Quantifiers
-#=================================================================================
+#===============================================================================
 
 # In regular expressions, quantifiers specify the number of times a character or a group 
 # can appear in a string. Understanding and using quantifiers effectively can enhance 
@@ -237,9 +237,9 @@ print(re.findall(r"\w{3,5}", text))
 # They enable precise matching based on occurrence requirements, making them essential 
 # for text parsing, validation, and manipulation tasks.
 
-#=================================================================================
+#===============================================================================
 # 3. Anchors and Boundaries
-#=================================================================================
+#===============================================================================
 
 # Regular expressions in Python provide powerful tools for pattern matching in strings.
 # Anchors and boundaries are special characters that specify where a match must occur within the string.
@@ -292,9 +292,9 @@ print(re.findall(r"\bfox\b", text))  # Output: ['fox']
 # searching for a pattern without anchors might yield partial matches within words,
 # which could lead to incorrect assumptions about the data.
 
-#=================================================================================
+#===============================================================================
 # 4. Grouping and Capturing
-#=================================================================================
+#===============================================================================
 
 # Grouping in regular expressions allows you to extract specific parts of a string 
 # that match a pattern. This is fundamental for data extraction and manipulation tasks.
@@ -352,9 +352,9 @@ print(matches)  # Output: ['hello', 'world']
 # This can help refine your patterns and avoid common pitfalls related to 
 # greedy versus non-greedy matching (e.g., using .*? for non-greedy captures).
 
-#=================================================================================
+#===============================================================================
 # 5. Lookahead and Lookbehind Assertions
-#=================================================================================
+#===============================================================================
 
 # Lookahead and lookbehind assertions are powerful features in regular expressions 
 # that allow for more complex pattern matching without consuming characters in the string.
@@ -422,9 +422,9 @@ print(matches)  # Output: ['and', 'johndoe']
 # and more efficient pattern searches by maintaining the integrity of the 
 # surrounding text while still isolating desired matches.
 
-#=================================================================================
+#===============================================================================
 # 6. Flags and Options
-#=================================================================================
+#===============================================================================
 
 # In this section, we explore the use of flags in regular expressions (regex) in Python.
 # Flags allow you to modify the behavior of the regex engine, enabling more flexible pattern matching.
@@ -483,9 +483,9 @@ if match:
 # and relevant to the parts of the regex they describe.
 # Additionally, when using MULTILINE mode, ensure the input string is formatted correctly; otherwise, patterns may yield unexpected results.
 
-#=================================================================================
+#===============================================================================
 # 7. Substitution and Splitting
-#=================================================================================
+#===============================================================================
 
 # In this section, we explore text manipulation using regular expressions (regex) in Python.
 # Regular expressions provide powerful capabilities for searching, matching, and modifying strings.
@@ -536,9 +536,9 @@ print(re.split(r"[,;:]", text))  # Output: ['apple', 'banana', 'cherry', 'date']
 # and splitting for parsing structured text into manageable components. Regular expressions can handle complex patterns,
 # but ensure to test regex patterns thoroughly as they can lead to unexpected results if not properly defined.
 
-#=================================================================================
+#===============================================================================
 # 8. Greedy vs. Non-Greedy Matching
-#=================================================================================
+#===============================================================================
 
 # In regular expressions, the distinction between greedy and non-greedy (or lazy) matching
 # is crucial for accurately capturing patterns in strings.
@@ -591,9 +591,9 @@ print(re.findall(pattern, text))  # Output: ['<p>', '<b>', '</b>', '</p>']
 # to ensure they yield the intended results. Additionally, be aware that overly complex
 # regular expressions can impact performance, so keep them as simple and efficient as possible.
 
-#=================================================================================
+#===============================================================================
 # 9. Advanced Techniques
-#=================================================================================
+#===============================================================================
 
 # In this section, we explore advanced techniques in regular expressions (regex) that provide more control and efficiency 
 # when performing pattern matching. Understanding these techniques can enhance your ability to solve complex text processing tasks.
@@ -661,9 +661,9 @@ print(re.match(pattern, "aaab"))  # Output: None
 # However, they should be used judiciously; improper use can lead to confusion and harder-to-maintain code.
 # Always validate regex patterns against a range of expected input to ensure they behave as intended.
 
-#=================================================================================
+#===============================================================================
 # 10. Working with URLs
-#=================================================================================
+#===============================================================================
 
 # In this section, we demonstrate how to work with URLs in Python using regular expressions.
 # Regular expressions provide a powerful way to search for and manipulate string patterns.
@@ -730,9 +730,9 @@ if match_with_query:
 # Also, ensure that the regex adequately covers the possible variations of the URLs you expect 
 # to process, as missing edge cases can lead to incorrect parsing.
 
-#=================================================================================
+#===============================================================================
 # 11. Email Validation
-#=================================================================================
+#===============================================================================
 
 # Email validation is a common task in applications to ensure that user-provided email addresses are correctly formatted.
 # Regular expressions (regex) offer a powerful way to validate the structure of email addresses.
@@ -779,9 +779,9 @@ for email in emails:
 # Always keep in mind that the only definitive way to validate an email address is through a confirmation process (e.g., sending a verification email).
 # Moreover, regex patterns can become complex and hard to read if not structured well. Maintaining clarity in regex is crucial for future modifications.
 
-#=================================================================================
+#===============================================================================
 # 12. Performance Considerations
-#=================================================================================
+#===============================================================================
 
 # Performance considerations are crucial when dealing with string searching and manipulation,
 # especially when the input size is large. The following examples demonstrate how to measure 
