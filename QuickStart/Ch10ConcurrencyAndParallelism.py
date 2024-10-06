@@ -85,9 +85,9 @@ def queue_example():
 # As a best practice, always handle exceptions in concurrent code to prevent silent failures.
 
 
-#=================================================================================
+#===============================================================================
 # 1. Threading
-#=================================================================================
+#===============================================================================
 
 # The threading module in Python allows concurrent execution of code,
 # making it possible to run multiple threads (smaller units of a process) in parallel.
@@ -167,9 +167,9 @@ with concurrent.futures.ThreadPoolExecutor(max_workers=3) as executor:  # Limit 
 # especially for I/O-bound tasks. Understanding locks, thread management, and best practices
 # will lead to safer and more efficient threaded applications.
 
-#=================================================================================
+#===============================================================================
 # 2. Multiprocessing
-#=================================================================================
+#===============================================================================
 
 # Multiprocessing is a powerful module in Python that allows for the concurrent execution 
 # of tasks across multiple CPU cores. This is particularly useful for CPU-bound tasks 
@@ -251,9 +251,9 @@ if __name__ == '__main__':
 # 2. Complexity: Managing state and data between processes can be complex. Use synchronization primitives (like Locks) when needed.
 # 3. Debugging: Debugging multiprocessing code can be more challenging due to concurrent execution; consider using logging to track process behavior.
 
-#=================================================================================
+#===============================================================================
 # 3. Async Programming
-#=================================================================================
+#===============================================================================
 
 # Asynchronous programming allows for concurrent execution, enabling efficient management
 # of I/O-bound tasks, such as file operations or network requests. Python's asyncio library
@@ -380,9 +380,9 @@ asyncio.run(use_async_iterator())
 # This allows for efficient processing of sequences where each element requires 
 # an asynchronous operation, ideal for handling streams of data or API responses.
 
-#=================================================================================
+#===============================================================================
 # 4. Combining Threading and Multiprocessing
-#=================================================================================
+#===============================================================================
 
 # In this section, we explore how to efficiently combine threading and multiprocessing 
 # in Python to handle both CPU-bound and I/O-bound tasks. Understanding when to use 
@@ -424,9 +424,9 @@ if __name__ == '__main__':
 # while threading is more suited for I/O-bound tasks, such as network operations or file I/O.
 # Understanding this distinction can lead to more effective resource utilization and improved performance.
 
-#=================================================================================
+#===============================================================================
 # 5. Advanced Multiprocessing Techniques
-#=================================================================================
+#===============================================================================
 
 # In this section, we explore advanced techniques for inter-process communication (IPC)
 # in Python using the multiprocessing module. IPC allows processes to communicate
@@ -515,9 +515,9 @@ if __name__ == '__main__':
 # For example, ensure that all processes correctly signal completion (like the None value in the Queue).
 # Otherwise, the consumer could wait indefinitely for more data, leading to a deadlock situation.
 
-#=================================================================================
+#===============================================================================
 # 6. Advanced Asyncio Techniques
-#=================================================================================
+#===============================================================================
 
 # This section covers advanced techniques in asynchronous programming using the asyncio library in Python.
 # Asynchronous programming is essential for writing non-blocking code, especially in I/O-bound applications.
@@ -595,9 +595,9 @@ asyncio.run(main_cancellation())  # Entry point to run the asynchronous cancella
 # Additionally, ensure that long-running tasks are regularly checking for cancellation requests 
 # to avoid holding onto resources unnecessarily.
 
-#=================================================================================
+#===============================================================================
 # 7. Concurrent.Futures for Easy Parallelism
-#=================================================================================
+#===============================================================================
 
 # The 'concurrent.futures' module in Python provides a high-level interface for asynchronously executing 
 # callables using threads or processes. This section focuses on using ProcessPoolExecutor for CPU-bound tasks.
@@ -637,9 +637,9 @@ with concurrent.futures.ProcessPoolExecutor() as executor:
 # image manipulation, or any computationally intensive tasks where multiple CPU cores can be leveraged.
 # It simplifies the parallelization process without the complexity of managing subprocesses manually.
 
-#=================================================================================
+#===============================================================================
 # 8. Best Practices and Tips for Concurrency
-#=================================================================================
+#===============================================================================
 
 # In this section, we outline best practices and tips for handling concurrency in Python.
 # These principles are essential for writing efficient, robust, and maintainable concurrent code.
