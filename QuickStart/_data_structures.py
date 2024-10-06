@@ -1,11 +1,11 @@
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 #                                 Data Structures
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-#=================================================================================
+#===============================================================================
 # Data Structures: Basic Data Structures - Arrays
-#=================================================================================
+#===============================================================================
 
 # In Python, an array is a data structure that can hold a fixed number of elements of the same type.
 # However, Python does not have a native array data type like some other languages (e.g., C, Java).
@@ -81,9 +81,9 @@ print("Array after Removal:", array_example)  # Outputs: [10, 35, 40, 50, 60]
 # If using large datasets or requiring advanced operations (like multi-dimensional arrays), consider using NumPy arrays.
 # NumPy offers a rich set of operations and optimizations, particularly for numerical data.
 
-#=================================================================================
+#===============================================================================
 # Data Structures: Basic Data Structures - Linked Lists
-#=================================================================================
+#===============================================================================
 
 # In this section, we focus on linked lists, a fundamental data structure 
 # that allows for efficient insertion and deletion operations. Linked lists are 
@@ -256,9 +256,9 @@ for _ in range(5):  # Limit to 5 to avoid infinite loop
 # Be mindful of the trade-offs in memory overhead and access speed.
 
 
-#=================================================================================
+#===============================================================================
 # Data Structures: Basic Data Structures, Stacks
-#=================================================================================
+#===============================================================================
 
 # In this section, we delve into the basic data structure known as stacks.
 # Stacks are critical for many algorithms and applications, particularly in scenarios 
@@ -368,9 +368,9 @@ print("Current stack after pop:", limited_stack.stack)  # Outputs: [1, 2]
 # - When designing custom structures, consider implementing methods for size checks or capacity management.
 
 
-#=================================================================================
+#===============================================================================
 # Data Structures, Basic Data Structures, Queues
-#=================================================================================
+#===============================================================================
 
 # In this section, we focus specifically on queues, a fundamental data structure.
 # A queue follows the first-in, first-out (FIFO) principle, meaning the first element added 
@@ -511,9 +511,9 @@ print("Deque after removal:", deque_example)  # Remaining elements in the deque
 # where elements are not processed in the expected order, leading to incorrect results.
 
 
-#=================================================================================
+#===============================================================================
 # Data Structures: Hash-based Structures, Hash Table
-#=================================================================================
+#===============================================================================
 
 # Hash tables are a fundamental data structure providing efficient key-value storage.
 # They use a hashing function to compute an index (hash) into an array of buckets or slots,
@@ -603,9 +603,9 @@ print("Lookup for 'city':", hash_table.lookup("city"))  # Expected output: None 
 # - Profiling your hash table's performance with different datasets can provide insights into potential bottlenecks.
 # - Always document the expected behavior of your hash table's methods, especially regarding handling collisions and resizing.
 
-#=================================================================================
+#===============================================================================
 # Data Structures: Hash-based Structures, Hash Set
-#=================================================================================
+#===============================================================================
 
 # Hash-based structures, such as hash tables, provide an efficient way to store and 
 # retrieve data based on keys. They leverage a hash function to compute an index 
@@ -704,9 +704,9 @@ custom_hash_set.add(2)
 custom_hash_set.add(2)  # Duplicate will be ignored
 print("Custom Hash Set Data:", custom_hash_set.data)  # Visualize underlying data structure
 
-#=================================================================================
+#===============================================================================
 # Data Structures: Hash-based Structures, Hash Map (Dictionary)
-#=================================================================================
+#===============================================================================
 
 # In this section, we delve into hash-based data structures, focusing specifically 
 # on hash maps, commonly implemented in Python as dictionaries. Hash maps provide 
@@ -790,9 +790,9 @@ item_counts = Counter(items)  # Counts occurrences of each unique item
 print("Counter Example:", item_counts)  # Outputs: Counter({'banana': 3, 'apple': 2, 'orange': 1})
 
 
-#=================================================================================
+#===============================================================================
 # Data Structures: Tree Structures, BST
-#=================================================================================
+#===============================================================================
 
 # In this section, we explore tree structures, specifically binary trees.
 # Trees are hierarchical data structures that consist of nodes connected by edges.
@@ -890,11 +890,11 @@ in_order_traversal(bst_root)  # Output: 3, 5, 7, 10, 15
 # Understanding their properties and operations is essential for effective algorithm design.
 
 
-#=================================================================================
+#===============================================================================
 # Data Structures
 # Tree Structures
 # AVL Tree
-#=================================================================================
+#===============================================================================
 
 # An AVL Tree is a self-balancing binary search tree where the difference between
 # the heights of the left and right subtrees (balance factor) for any node 
@@ -1020,9 +1020,9 @@ print("Balance factor of root:", get_balance(root))  # Should be in the range of
 # - For datasets with mostly sorted data, AVL trees can become unbalanced quickly, 
 # leading to potential performance issues if not managed properly.
 
-#=================================================================================
+#===============================================================================
 # Data Structures - Tree Structures
-#=================================================================================
+#===============================================================================
 
 # In this section, we will discuss tree structures, focusing specifically on the 
 # Red-Black Tree. A Red-Black Tree is a self-balancing binary search tree where 
@@ -1173,9 +1173,9 @@ for value in values_to_insert:
 # Their self-balancing property makes them suitable for scenarios where frequent modifications are expected.
 
 
-#=================================================================================
+#===============================================================================
 # Data Structures - Tree Structures
-#=================================================================================
+#===============================================================================
 
 # In this section, we will explore tree structures, which are fundamental data 
 # structures used to represent hierarchical relationships. 
@@ -1291,9 +1291,9 @@ print("Updated Segment Tree Root Sum:", segment_tree_root.sum)  # Outputs update
 # them until necessary.
 
 
-#=================================================================================
+#===============================================================================
 # Data Structures: Tree Structures and Fenwick Tree (Binary Indexed Tree)
-#=================================================================================
+#===============================================================================
 
 # In this section, we explore tree data structures and specifically focus on the Fenwick Tree, 
 # also known as a Binary Indexed Tree (BIT). These structures are useful for efficient 
@@ -1391,9 +1391,9 @@ print("Cumulative sum from index 1 to 3:", cumulative_sum)  # Outputs: 15 (5 + 3
 # of the tree, as this could lead to unexpected behavior.
 
 
-#=================================================================================
+#===============================================================================
 # Data Structures: Tree Structures, B-Trees
-#=================================================================================
+#===============================================================================
 
 # Tree structures are hierarchical data structures that consist of nodes connected by edges.
 # Each tree has a root node and child nodes. Trees are particularly useful for representing 
@@ -1572,9 +1572,9 @@ print("B-Tree Keys after Insertions:", b_tree_root.keys)  # Shows the keys in th
 # - Analyze space complexity alongside time complexity; trees can require significant memory overhead.
 # - Test for edge cases (e.g., inserting into a full tree, deleting from a tree with one node).
 
-#=================================================================================
+#===============================================================================
 # Data Structures, Tree Structures, N-ary Tree
-#=================================================================================
+#===============================================================================
 
 # In this section, we will discuss tree structures, focusing on N-ary trees.
 # Trees are hierarchical data structures that consist of nodes connected by edges.
@@ -1672,9 +1672,9 @@ level_order_traversal(root)  # Outputs: 1 2 3 4
 # - Ensure that children are managed correctly to avoid memory leaks or references to deleted nodes.
 # - When building N-ary trees, consider using a list for children for simplicity but be aware of its performance characteristics.
 
-#=================================================================================
+#===============================================================================
 # Data Structures: Tree Structures and Tries (Prefix Trees)
-#=================================================================================
+#===============================================================================
 
 # Trees are hierarchical data structures consisting of nodes connected by edges.
 # They are widely used for representing data that has a parent-child relationship, 
@@ -1778,9 +1778,9 @@ print("Prefix 'hea':", trie.starts_with("hea"))   # Outputs: True
 # - Ensure to properly handle the case sensitivity of words if the application requires it.
 
 
-#=================================================================================
+#===============================================================================
 # Data Structures: Graph Structures, Adjacency Matrix
-#=================================================================================
+#===============================================================================
 
 # Graphs are abstract data types that consist of a finite set of vertices (or nodes)
 # and a set of edges connecting these vertices. They are used to model relationships
@@ -1864,9 +1864,9 @@ for row in adjacency_matrix:
 # - Ensure that you handle both directed and undirected graphs correctly 
 # to maintain the symmetry of the matrix appropriately.
 
-#=================================================================================
+#===============================================================================
 # Data Structures, Graph Structures, Adjacency List
-#=================================================================================
+#===============================================================================
 
 # In this section, we delve into graph structures, specifically focusing on 
 # the adjacency list representation. Graphs are essential for modeling 
@@ -1951,9 +1951,9 @@ for vertex, edges in graph_defaultdict.items():
     print(f"Vertex {vertex}: Edges {edges}")
 
 
-#=================================================================================
+#===============================================================================
 # Data Structures
-#=================================================================================
+#===============================================================================
 
 # In this section, we focus on graph structures and specifically the incidence matrix.
 # Graphs are a fundamental data structure used to represent relationships between 
@@ -2040,9 +2040,9 @@ for i in range(len(vertices)):
 
 
 
-#=================================================================================
+#===============================================================================
 # Data Structures: Specialized Data Structures
-#=================================================================================
+#===============================================================================
 
 # In this section, we will discuss specialized data structures that are commonly used 
 # in algorithm implementations, particularly heaps. Heaps are an important 
@@ -2139,9 +2139,9 @@ while priority_queue:
 # - Understand that heaps are not sorted; the elements can be out of order except for the root element.
 
 
-#=================================================================================
+#===============================================================================
 # Specialized Data Structures: Heaps and Min-Heaps
-#=================================================================================
+#===============================================================================
 
 # Heaps are a specialized tree-based data structure that satisfies the heap property.
 # They are particularly useful for implementing priority queues, where the highest 
@@ -2235,9 +2235,9 @@ print("Min-Heap after extracting min:", min_heap.heap)
 # such as balanced binary search trees (BSTs), depending on the frequency of insertions and deletions.
 
 
-#=================================================================================
+#===============================================================================
 # Data Structures
-#=================================================================================
+#===============================================================================
 
 # In this section, we explore specialized data structures, focusing on heaps,
 # particularly max-heaps. Understanding these structures is essential for 
@@ -2352,9 +2352,9 @@ print("Max Heap after deletion:", max_heap_instance.heap)  # Current state of th
 # leveraged in various algorithms, such as heapsort, which uses the 
 # properties of heaps to sort data efficiently.
 
-#=================================================================================
+#===============================================================================
 # Data Structures: Specialized Data Structures, Disjoint Set (Union-Find)
-#=================================================================================
+#===============================================================================
 
 # Specialized data structures are tailored to address specific types of problems more efficiently than general-purpose structures.
 # One such example is the Disjoint Set, also known as Union-Find. This structure efficiently handles dynamic connectivity queries.
@@ -2425,9 +2425,9 @@ print("Root of 5:", disjoint_set.find(5))  # Should output root of 4 (same set a
 # - Mismanaging ranks during union operations can also result in inefficient tree structures.
 # - Always validate inputs to ensure they are within the bounds of the initialized data structure.
 
-#=================================================================================
+#===============================================================================
 # Data Structures, Specialized Data Structures, Bloom Filter
-#=================================================================================
+#===============================================================================
 
 # Specialized data structures are designed for specific use cases and often optimize for particular 
 # operations or functionalities. One such specialized structure is the Bloom Filter, which 
@@ -2505,9 +2505,9 @@ print("Checking membership for 'grape':", bloom_filter.check("grape"))  # Expect
 # - Monitor the load factor (number of elements added vs. bit array size) to minimize false positives.
 # - If the false positive rate becomes unacceptable, consider using a larger bit array or a different approach.
 
-#=================================================================================
+#===============================================================================
 # Data Structures
-#=================================================================================
+#===============================================================================
 
 # In this section, we focus on specialized data structures that can enhance performance 
 # for specific use cases. Understanding these structures helps in selecting the 
@@ -2612,9 +2612,9 @@ print("Searching for 15:", skip_list.search(15))  # Should return False
 # Overall, skip lists provide a robust and efficient data structure option for dynamic data 
 # management, striking a balance between simplicity and performance.
 
-#=================================================================================
+#===============================================================================
 # Data Structures, Specialized Data Structures, Skip List
-#=================================================================================
+#===============================================================================
 
 # Specialized data structures are designed for specific applications, 
 # offering unique features and performance benefits that can significantly 
@@ -2744,9 +2744,9 @@ print("Search for 6 in Skip List after deletion:", search_result_after_delete)  
 # - Complexity in implementing and debugging can arise if the randomization logic does not function correctly.
 # - The probabilistic nature might introduce unexpected behaviors; thorough testing is essential.
 
-#=================================================================================
+#===============================================================================
 # Data Structures, Specialized Data Structures, Suffix Tree
-#=================================================================================
+#===============================================================================
 
 # In this section, we delve into specialized data structures, focusing on the suffix tree.
 # Specialized data structures provide unique functionalities that cater to specific problem-solving needs.
@@ -2832,9 +2832,9 @@ display_suffix_tree(suffix_tree.root, suffix_tree.text)
 # These enhancements can further optimize the data structure for real-world applications.
 
 
-#=================================================================================
+#===============================================================================
 # Data Structures, Specialized Data Structures, Suffix Array
-#=================================================================================
+#===============================================================================
 
 # In this section, we delve into specialized data structures, focusing on the suffix array.
 # Understanding specialized data structures is crucial for optimizing performance 
@@ -2893,9 +2893,9 @@ print("Suffix Array:", suffix_array)
 # - Memory management for large strings, as creating suffix arrays can be memory intensive.
 
 
-#=================================================================================
+#===============================================================================
 # Data Structures, Specialized Data Structures, K-D Tree
-#=================================================================================
+#===============================================================================
 
 # In this section, we will explore specialized data structures, focusing on the K-D Tree,
 # which is particularly useful for organizing points in a k-dimensional space.
@@ -3001,9 +3001,9 @@ print("Nearest neighbor to", target_point, "is", nearest[0], "with distance squa
 # In summary, K-D Trees are powerful for organizing and searching multidimensional data,
 # but careful consideration must be given to their structure and maintenance for optimal performance.
 
-#=================================================================================
+#===============================================================================
 # Data Structures, Specialized Data Structures, Quad Tree
-#=================================================================================
+#===============================================================================
 
 # In this section, we delve into specialized data structures, focusing on Quad Trees.
 # Specialized data structures are designed to solve specific problems more efficiently 
@@ -3107,9 +3107,9 @@ for point in points:
 
 
 
-#=================================================================================
+#===============================================================================
 # Data Structures, Specialized Data Structures, Octree
-#=================================================================================
+#===============================================================================
 
 # In this section, we delve into specialized data structures, specifically the octree.
 # Specialized data structures are designed to solve specific types of problems more efficiently
@@ -3213,9 +3213,9 @@ print("Points in root node:", octree_root.points)  # Display points in root node
 # where maintaining a count of points per node or the presence of certain attributes can enhance performance.
 # - Use octrees in conjunction with other spatial structures (like BSP trees) for more complex applications.
 
-#=================================================================================
+#===============================================================================
 # Data Structures, Dynamic Programming Structures, Memoization Table
-#=================================================================================
+#===============================================================================
 
 # In this section, we explore dynamic programming concepts and memoization, 
 # which are powerful techniques for optimizing recursive algorithms. 
@@ -3314,9 +3314,9 @@ def fibonacci_lru(n):
 # Mastery of these concepts enables you to tackle a wide range of computational problems 
 # more efficiently than naive recursive methods.
 
-#=================================================================================
+#===============================================================================
 # Data Structures, Dynamic Programming Structures, Dynamic Array
-#=================================================================================
+#===============================================================================
 
 # In this section, we delve into dynamic programming structures and dynamic arrays, 
 # discussing their characteristics, use cases, and performance considerations.
@@ -3411,9 +3411,9 @@ print("Length of Longest Common Subsequence:", lcs_table[len_a][len_b])  # Outpu
 # carefully when choosing the appropriate structure or technique for a given problem.
 
 
-#=================================================================================
+#===============================================================================
 # Data Structures, String Structures, Rope
-#=================================================================================
+#===============================================================================
 
 # In this section, we delve into more complex data structures that are particularly useful 
 # in handling strings and dynamic data manipulation. The rope data structure is a specialized 
@@ -3535,9 +3535,9 @@ print_rope(right_rope)
 # implications and optimal usage scenarios, you can significantly 
 # improve the efficiency of string-heavy applications.
 
-#=================================================================================
+#===============================================================================
 # Data Structures, String Structures, Suffix Tree
-#=================================================================================
+#===============================================================================
 
 # In this section, we delve into string-specific data structures, 
 # particularly the suffix tree, which is an advanced structure for 
@@ -3608,9 +3608,9 @@ print("Root has children:", suffix_tree.root.children.keys())  # Display immedia
 # - Text compression algorithms that leverage repeated patterns in strings.
 
 
-#=================================================================================
+#===============================================================================
 # Data Structures, String Structures, Suffix Array
-#=================================================================================
+#===============================================================================
 
 # In this section, we will explore the suffix array, an efficient data structure 
 # used primarily for string manipulation and analysis. Suffix arrays are particularly 
