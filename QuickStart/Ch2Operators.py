@@ -1,12 +1,12 @@
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Python Notes Sheet: Operators
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 
-#=================================================================================
+#===============================================================================
 # 1. Arithmetic Operators
-#=================================================================================
+#===============================================================================
 
 # Assigning values 10 and 3 to variables a and b
 a, b = 10, 3
@@ -74,9 +74,9 @@ d = 0.1 + 0.2
 print(f"0.1 + 0.2 = {d}")  # Output might be 0.30000000000000004 instead of 0.3
 # Advanced Insight: This occurs due to the binary representation of floating-point numbers; always be aware of this when high precision is crucial
 
-#=================================================================================
+#===============================================================================
 # 2. Comparison Operators
-#=================================================================================
+#===============================================================================
 
 # Here, two variables x and y are assigned the values 5 and 10 respectively.
 x, y = 5, 10
@@ -132,9 +132,9 @@ print(f"list1 is list3: {list1 is list3}")  # Output: True, because they refer t
 # Advanced insight: Use 'is not' judiciously to highlight intentional differences in object identity.
 print(f"list1 is not list2: {list1 is not list2}")  # Output: True, because list1 and list2 are different objects
 
-#=================================================================================
+#===============================================================================
 # 3. Logical Operators
-#=================================================================================
+#===============================================================================
 # Logical operators are used to combine or manipulate boolean values (True, False). 
 # They are essential for making decisions and controlling the flow of a program.
 # Python includes three primary logical operators: AND, OR, and NOT.
@@ -249,9 +249,9 @@ print(f"m >> 2: {m >> 2}")  # Output will be 15, shifting bits of 'm' (60) right
 # Bitwise operators are fast, low-level operations that are useful for tasks like data encoding, cryptography, or performance-critical systems.
 # Advanced tip: In applications where performance is crucial (like embedded systems or high-performance computing), bitwise operations are preferred because of their efficiency.
 
-#=================================================================================
+#===============================================================================
 # 5. Membership Operators
-#=================================================================================
+#===============================================================================
 
 # Membership operators (`in`, `not in`) are used to check if a value exists within a sequence like a list, tuple, or string.
 # These operators return a boolean value (`True` or `False`) based on whether the value is found.
@@ -283,9 +283,9 @@ print(f"'a' in 'apple': {'a' in 'apple'}")  # Output: True
 # code, especially when dealing with very large sequences. For frequently accessed large collections, using sets
 # or dicts for membership testing provides constant-time lookups instead of linear-time lookups in lists.
 
-#=================================================================================
+#===============================================================================
 # 6. Assignment Operators
-#=================================================================================
+#===============================================================================
 
 # These operators allow for modifying variables in place,
 # reducing code verbosity and improving readability. They work by performing the operation
@@ -352,9 +352,9 @@ print(f"b after ^=: {b}")  # Output: 49. Sets bits that are different between `b
 #    - OR (`|`) sets bits.
 #    - XOR (`^`) toggles bits.
 
-#=================================================================================
+#===============================================================================
 # 7. Operator Precedence
-#=================================================================================
+#===============================================================================
 
 # Python follows the PEMDAS rule (Parentheses, Exponents, Multiplication/Division, Addition/Subtraction)
 result = 2 + 3 * 4 ** 2 - 6 / 2
@@ -364,9 +364,9 @@ print(f"2 + 3 * 4 ** 2 - 6 / 2 = {result}")  # Output: 47.0
 result = ((2 + 3) * 4 ** 2) - (6 / 2)
 print(f"((2 + 3) * 4 ** 2) - (6 / 2) = {result}")  # Output: 77.0
 
-#=================================================================================
+#===============================================================================
 # 8. Ternary Operator (Conditional Expression)
-#=================================================================================
+#===============================================================================
 
 # Example 1: Basic Ternary Operator Usage
 x = 10
@@ -387,9 +387,9 @@ print(f"Max value of {x} and {y} is: {max_value}")  # Output: 20
 # blocks for clarity. Ternary operators should be used in cases where the logic
 # is simple and fits within one line without compromising readability.
 
-#=================================================================================
+#===============================================================================
 # Example 2: Nested Ternary Operator (Use Sparingly for Readability)
-#=================================================================================
+#===============================================================================
 
 a, b, c = 3, 5, 1
 
@@ -419,9 +419,9 @@ print(f"Max of {a}, {b}, and {c} is: {max_of_three}")  # Output: 5
 # particularly in complex projects.
 
 
-#=================================================================================
+#===============================================================================
 # 9. Walrus Operator := (Python 3.8+)
-#=================================================================================
+#===============================================================================
 
 # The walrus operator := was introduced in Python 3.8 and is a new syntax feature that allows 
 # assignments to occur within expressions, which can help to make code more concise and readable.
@@ -490,9 +490,9 @@ print(filtered_lengths)  # This will output the lengths of strings that have mor
 #    Otherwise, stick with traditional assignment.
 
     
-#=================================================================================
+#===============================================================================
 # 10. Advanced Operator Usage
-#=================================================================================
+#===============================================================================
 
 # Using operators with different types
 # Here, we use the '*' operator to repeat a string. In this case, the string 'Na' is 
