@@ -1,10 +1,10 @@
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Python Cheat Sheet: Functions
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#=================================================================================
+#===============================================================================
 # 1. Defining and Calling Functions
-#=================================================================================
+#===============================================================================
 
 # In Python, functions are defined using the 'def' keyword.
 # Functions are reusable blocks of code that perform a specific task.
@@ -77,9 +77,9 @@ print(f"Min: {minimum}, Max: {maximum}")  # Output: Min: 1, Max: 8
 # If returning a tuple, consider using namedtuple or dataclass (from Python's standard library)
 # for more readable code. This allows accessing returned values by name rather than position, improving clarity.
 
-#=================================================================================
+#===============================================================================
 # 2. Arguments and Parameters
-#=================================================================================
+#===============================================================================
 
 # In Python, functions can take various types of arguments and parameters to allow for
 # flexibility in how they are called. This includes default arguments, keyword arguments,
@@ -180,9 +180,9 @@ multi_purpose(1, 2, 3, name="Sabbir", age=30)
 # arbitrary keyword arguments.
 
 
-#=================================================================================
+#===============================================================================
 # 3. Lambda Functions
-#=================================================================================
+#===============================================================================
 
 # Lambda functions are small, anonymous functions in Python, defined using the 'lambda' keyword.
 # These functions are typically used when you need a simple, one-time operation and don't want to define a full function using 'def'.
@@ -247,9 +247,9 @@ print(f"Even numbers: {even_numbers}")  # Output: [2, 4]
 # 2. Using lambda for functions that should be reusable—defining a named function with 'def' is preferable for clarity and reuse.
 
 
-#=================================================================================
+#===============================================================================
 # 4. Function Annotations
-#=================================================================================
+#===============================================================================
 
 # Function annotations provide a way to attach metadata to function arguments and return types.
 # These annotations are optional and do not affect the function's execution; they are mainly for documentation purposes.
@@ -326,9 +326,9 @@ handle_complex_data([1, 2, 3], ("Important", True))
 # Function annotations are a valuable tool for writing clear, maintainable, and type-aware code.
 # While they don't enforce types at runtime, they are essential for documentation, static analysis, and tooling in modern Python development.
 
-#=================================================================================
+#===============================================================================
 # 5. Recursive Functions
-#=================================================================================
+#===============================================================================
 
 # Recursive functions are functions that call themselves to solve smaller instances of the same problem.
 # They are particularly useful for problems that can be broken down into similar subproblems (e.g., factorial, Fibonacci sequence, tree traversal).
@@ -415,9 +415,9 @@ print(f"10th Fibonacci number with memoization: {fibonacci_memoized(10)}")  # Ou
 # Recursive Fibonacci is elegant for educational purposes but should be optimized using memoization or iterative approaches in real-world applications 
 # to avoid unnecessary recomputation and high time complexity.
 
-#=================================================================================
+#===============================================================================
 # 6. Higher-Order Functions
-#=================================================================================
+#===============================================================================
 
 # Higher-order functions are functions that take other functions as arguments or return functions as their result.
 # These are essential for functional programming patterns and allow for more flexible, reusable code.
@@ -478,9 +478,9 @@ print(operation(5, 3))  # Output: 8
 # (e.g., add()) unless explicitly needed. 
 # Another caution is the use of anonymous (lambda) functions, which are powerful but can reduce readability if overused.
 
-#=================================================================================
+#===============================================================================
 # 7. Closures
-#=================================================================================
+#===============================================================================
 
 # Closures in Python are a way of retaining access to variables from the enclosing scope even after 
 # the outer function has finished execution. This enables delayed or deferred execution of code with context retained.
@@ -516,9 +516,9 @@ print(add_5(7))  # Output: 12
 # are hard to track. It's often safer to work with immutable data when designing closures for predictable behavior.
 
 
-#=================================================================================
+#===============================================================================
 # 8. Decorators
-#=================================================================================
+#===============================================================================
 
 # Decorators are a powerful tool in Python that allow you to modify or enhance the behavior of functions or methods without altering their code.
 # They follow the design principle of "wrapping" a function, adding extra functionality before or after the original function runs.
@@ -603,9 +603,9 @@ say_hello("Sabbir")
 
 
 
-#=================================================================================
+#===============================================================================
 # 9. Generators
-#=================================================================================
+#===============================================================================
 
 # Generators in Python are a special kind of iterable, like lists or tuples, but they do not store their contents in memory.
 # Instead, they generate items on the fly, which makes them more memory-efficient when dealing with large datasets.
@@ -665,9 +665,9 @@ print(list(squares))  # Output: [0, 1, 4, 9, 16], the squares of 0 through 4 are
 # Another common mistake is treating generators like lists or trying to access them via indexing, which is not possible since generators don't support random access.
 
 
-#=================================================================================
+#===============================================================================
 # 10. Function Attributes
-#=================================================================================
+#===============================================================================
 
 # In Python, functions are first-class objects, meaning they can have attributes attached to them
 # just like any other object (such as instances of classes). 
@@ -749,9 +749,9 @@ print(another_function.executed)  # Output: True
 # Overusing them can clutter the function’s namespace, and their dynamic nature can make debugging more difficult.
 # Limit their use to cases where they genuinely enhance the code, such as in decorators or when attaching metadata.
 
-#=================================================================================
+#===============================================================================
 # 11. Partial Functions
-#=================================================================================
+#===============================================================================
 
 # In Python, the `functools.partial` function allows you to fix a certain number of arguments of a function and generate a new function.
 # This is especially useful for creating more specific functions based on general-purpose ones.
@@ -812,9 +812,9 @@ print(say_hello("Sabbir"))  # Output: Hello, Sabbir!
 # - Use descriptive names for your partial functions to make it clear what specific case they handle (like 'square' or 'cube').
 # - While partial functions are useful for fixing certain arguments, be mindful of readability; too many layers of partial applications can obscure the original function.
 
-#=================================================================================
+#===============================================================================
 # 12. Function Caching
-#=================================================================================
+#===============================================================================
 
 # Function caching is an optimization technique that stores the results of expensive function calls
 # and returns the cached result when the same inputs occur again.
@@ -882,9 +882,9 @@ print(fibonacci_cached(100))  # Output: 354224848179261915075
 # Use function caching for pure functions (functions that always return the same output for the same inputs and have no side effects)
 # where repeated calculations occur. Avoid using it in scenarios where the function's results depend on external states or where side effects are expected.
 
-#=================================================================================
+#===============================================================================
 # 13. Asynchronous Functions (Coroutines)
-#=================================================================================
+#===============================================================================
 
 # Asynchronous functions (also called coroutines) in Python allow for non-blocking code execution.
 # This means the program can perform other tasks while waiting for an I/O-bound or time-consuming operation.
@@ -978,9 +978,9 @@ asyncio.run(main_concurrent())
 #    Python's async framework is less effective. Instead, consider multithreading or multiprocessing.
 
 
-#=================================================================================
+#===============================================================================
 # 14. Type Hinting for Functions (Python 3.5+)
-#=================================================================================
+#===============================================================================
 
 # Type hinting allows us to annotate function arguments and return types with expected data types.
 # Introduced in Python 3.5+, type hints do not enforce type checking at runtime but serve as a guide
