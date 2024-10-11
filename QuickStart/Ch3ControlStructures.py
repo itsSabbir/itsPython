@@ -1,13 +1,13 @@
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Python Cheat Sheet: Control Structures
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # Control structures dictate the flow of execution within the program. 
 # They enable the program to make decisions and execute certain sections of code conditionally.
 
-#=================================================================================
+#===============================================================================
 # 1. Conditional Statements
-#=================================================================================
+#===============================================================================
 
 # if statement
 # A simple if statement evaluates the condition and executes the indented block only if the condition is True.
@@ -80,9 +80,9 @@ if x > 0 and y < 20:  # Both conditions need to be True for the block to execute
 # - Similarly, for 'or', Python stops evaluating if the first condition is True.
 # - This short-circuiting behavior can optimize performance for expensive condition checks.
 
-#=================================================================================
+#===============================================================================
 # 2. Loops
-#=================================================================================
+#===============================================================================
 
 # Basic for loop with range:
 # This loop iterates 5 times, where 'i' takes values from 0 to 4 (range is exclusive of the end value).
@@ -149,11 +149,11 @@ print()  # Newline for clean output
 # Use time.sleep() or similar mechanisms to reduce CPU load when polling in an infinite loop.
 
 
-#=================================================================================
+#===============================================================================
 
 # 3.  Loop Control Statements in Python
 
-#=================================================================================
+#===============================================================================
 
 # This section demonstrates how to control the flow of loops using 'break', 'continue', and 'pass'.
 # Each construct serves a specific purpose for altering the loop's behavior, with different use cases for handling loop execution.
@@ -205,9 +205,9 @@ for i in range(3):
 
 
 
-#=================================================================================
+#===============================================================================
 # 4. Nested Loops
-#=================================================================================
+#===============================================================================
 
 # Nested for loops
 # A nested loop is when one loop runs inside another loop. Here, we are using
@@ -306,9 +306,9 @@ for i in range(3):
 
 
 
-#=================================================================================
+#===============================================================================
 # 5. Comprehensions
-#=================================================================================
+#===============================================================================
 
 # List comprehension example: Efficient way to create a list by applying a transformation (x**2) to each element 
 # in a range of numbers. List comprehensions are more concise and often faster than using a loop for the same purpose.
@@ -355,9 +355,9 @@ print(f"Matrix: {matrix}")  # Output: [[0, 1, 2], [1, 2, 3], [2, 3, 4]]
 
 
 
-#=================================================================================
+#===============================================================================
 # 6. else clause in loops
-#=================================================================================
+#===============================================================================
 
 # The 'else' clause in loops in Python is a lesser-known construct but can be quite useful.
 # It executes after the loop completes normally (i.e., without encountering a 'break' statement).
@@ -415,9 +415,9 @@ else:
 
 
 
-#=================================================================================
+#===============================================================================
 # 7. Switch-Case Alternative (Python 3.10+)
-#=================================================================================
+#===============================================================================
 
 # Python does not have a built-in switch-case statement like some other languages (e.g., C, Java).
 # However, Python 3.10 introduced the 'match' statement, which serves as a flexible and readable alternative.
@@ -508,9 +508,9 @@ print(process_command("invalid"))  # Output: Invalid command
 # Be cautious when using it in environments where you may need to support earlier Python versions.
 
 
-#=================================================================================
+#===============================================================================
 # 8. Exception Handling
-#=================================================================================
+#===============================================================================
 
 # Exception handling in Python is done using 'try', 'except', 'else', and 'finally' blocks.
 # It's a crucial mechanism for handling errors that can occur during runtime, 
@@ -639,9 +639,9 @@ except CustomError as e:  # Catching the custom exception
 # Always handle exceptions gracefully to avoid cryptic error messages and ensure your application can recover from errors when appropriate.
 
 
-#=================================================================================
+#===============================================================================
 # 9. Context Managers (with statement)
-#=================================================================================
+#===============================================================================
 
 # Context managers are designed to manage resources efficiently and cleanly.
 # They allow for setup and teardown of resources, ensuring that no matter how the block exits,
@@ -716,9 +716,9 @@ with managed_resource() as resource:
 # resource cleanup, improving code readability and reducing errors related to manual handling.
 
 
-#=================================================================================
+#===============================================================================
 # 10. Advanced Control Flow Techniques
-#=================================================================================
+#===============================================================================
 
 # Advanced control flow techniques allow for more efficient and expressive logic in Python.
 # Here, we'll explore short-circuit evaluation, the walrus operator, and using functions in control flow.
