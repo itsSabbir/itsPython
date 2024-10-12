@@ -78,9 +78,9 @@ print(Dog.species)  # Output: Canis familiaris
 # OOP encourages encapsulation (hiding internal details and exposing only necessary functionality),
 # which enhances modularity and maintainability of code.
 
-#=================================================================================
+#===============================================================================
 # 2. Inheritance
-#=================================================================================
+#===============================================================================
 
 # Inheritance is a fundamental concept in object-oriented programming (OOP) that allows a class to inherit attributes
 # and methods from another class. This promotes code reuse, better organization, and the ability to create a class hierarchy.
@@ -163,9 +163,9 @@ print(dog.speak())  # Output: Rex says Woof!
 # Avoid using inheritance where composition (has-a relationships) might be more appropriate. For example, instead of inheriting from a 'Wheel' class, 
 # a 'Car' class should have 'Wheel' objects.
 
-#=================================================================================
+#===============================================================================
 # 3. Multiple Inheritance
-#=================================================================================
+#===============================================================================
 
 # Multiple inheritance allows a class to inherit from more than one base class.
 # This can be useful when you want a class to have behaviors or attributes from different sources.
@@ -224,9 +224,9 @@ print(Duck.mro())  # Shows the order of method resolution
 # Only use multiple inheritance when it's truly needed to model complex behavior and ensure you understand MRO.
 # Composition is often preferred when you can delegate behaviors to other objects instead of using multiple inheritance.
 
-#=================================================================================
+#===============================================================================
 # 4. Method Resolution Order (MRO)
-#=================================================================================
+#===============================================================================
 
 # Method Resolution Order (MRO) is the order in which Python looks for a method in a hierarchy of classes.
 # When a method is called on an object, Python first looks in the object's class for the method, then proceeds to 
@@ -300,9 +300,9 @@ duck.sound()  # Output: Quack quack
 # As a best practice, use tools like 'print(class.__mro__)' and 'super()' to manage method resolution effectively,
 # and favor composition over inheritance in complex systems to reduce potential confusion.
 
-#=================================================================================
+#===============================================================================
 # 5. Encapsulation
-#=================================================================================
+#===============================================================================
 
 # Encapsulation is a fundamental OOP (Object-Oriented Programming) concept
 # that restricts access to some of an object's components, meaning the internal state of the object is hidden from the outside.
@@ -388,9 +388,9 @@ print(account.get_balance())  # Output: 1300
 # The underscore conventions are simply agreements among developers and can be broken.
 # Over-relying on name mangling (with double underscores) can make code harder to maintain.
 
-#=================================================================================
+#===============================================================================
 # 6. Properties
-#=================================================================================
+#===============================================================================
 
 # The @property decorator in Python allows you to define methods that behave like attributes.
 # It provides a clean way to add logic to attribute access without exposing the internal implementation to the user.
@@ -470,9 +470,9 @@ print(temp.celsius)  # Output: 30.0 (86°F converted to Celsius)
 # - Be cautious of circular logic. In this example, ensure that conversions between Celsius and Fahrenheit are consistent,
 #   and there is no infinite recursion between the property setters.
 
-#=================================================================================
+#===============================================================================
 # 7. Class and Static Methods
-#=================================================================================
+#===============================================================================
 
 # In Python, class methods and static methods provide different ways to define methods that aren't instance-specific.
 # They allow flexibility in how methods interact with class data, or perform tasks that aren't tied to instances at all.
@@ -511,9 +511,9 @@ print(MathOperations.add(5, 3))  # Output: 8
 # Here, multiply(4, 3) will result in 4 * 3, which gives 12.
 print(MathOperations.multiply(4, 3))  # Output: 12
 
-#=================================================================================
+#===============================================================================
 # Explanation:
-#=================================================================================
+#===============================================================================
 
 # Static methods:
 # - Defined with @staticmethod.
@@ -552,9 +552,9 @@ print(MathOperations.multiply(4, 3))  # Output: 12
 # - Another pitfall is overusing static methods where a class method might be more appropriate, especially when you 
 #   expect the method to interact with the class itself, such as in scenarios involving inheritance or needing to access class-specific behavior.
 
-#=================================================================================
+#===============================================================================
 # 8. Abstract Base Classes
-#=================================================================================
+#===============================================================================
 
 # Abstract Base Classes (ABCs) in Python allow you to define abstract classes, 
 # which are classes that cannot be instantiated directly and are intended to be inherited.
@@ -632,9 +632,9 @@ print(rect.perimeter())  # Output: 16, since 2 * (5 + 3) = 16
 # Abstract base classes are not commonly needed for small-scale projects, but they add value when designing 
 # for scalability or enforcing design patterns like interfaces in larger codebases.
 
-#=================================================================================
+#===============================================================================
 # 9. Method Overriding and Super()
-#=================================================================================
+#===============================================================================
 
 # In object-oriented programming (OOP), method overriding allows a subclass to provide a specific 
 # implementation of a method that is already defined in its parent class.
@@ -704,9 +704,9 @@ print(dog.speak())  # Output: Buddy barks
 # 3. Misusing 'super()' in multiple inheritance hierarchies can lead to subtle bugs if the MRO is not clearly understood.
 #    In cases of multiple inheritance, take extra care to design your class hierarchy thoughtfully to avoid complications.
 
-#=================================================================================
+#===============================================================================
 # 10. Composition
-#=================================================================================
+#===============================================================================
 
 # Composition is a design principle where one class contains an instance of another class.
 # It allows you to build complex functionality by combining simpler, self-contained components (objects).
@@ -766,9 +766,9 @@ print(car.start())  # Output: Car starting: Engine started
 # However, it's a better option for most real-world scenarios than deep inheritance trees, which can make code rigid and difficult to maintain.
 # The complexity in composition can be mitigated by clear, well-defined responsibilities for each component class.
 
-#=================================================================================
+#===============================================================================
 # 11. Mixins
-#=================================================================================
+#===============================================================================
 
 # A "Mixin" is a design pattern used in object-oriented programming to add reusable methods 
 # or attributes to classes without using full inheritance. This allows for more modular, 
@@ -857,9 +857,9 @@ employee.log("Employee created")  # Output: LOG: Employee created
 # Limit mixins to adding behaviors and utility methods, and avoid adding too much functionality 
 # that can obscure the intent of the base class. Keep them single-purpose to maintain clarity and simplicity.
 
-#=================================================================================
+#===============================================================================
 # 12. Dataclasses (Python 3.7+)
-#=================================================================================
+#===============================================================================
 
 # Dataclasses are a feature introduced in Python 3.7 that simplifies the creation of classes 
 # intended to store data. They automatically generate special methods like __init__, __repr__, 
@@ -918,9 +918,9 @@ class Circle:
 # It's best practice to use `field(default_factory=list)` or similar for mutable defaults to avoid shared references.
 # Additionally, ensure clarity in your data model, as using complex types can obscure the simplicity that dataclasses provide.
 
-#=================================================================================
+#===============================================================================
 # 13. Type Hints in Classes (Python 3.5+)
-#=================================================================================
+#===============================================================================
 
 # Type hints in Python (introduced in Python 3.5) allow developers to specify the expected data types of variables, 
 # function parameters, and return values. This enhances code readability and aids in debugging 
@@ -969,9 +969,9 @@ print(cart.get_items())  # Output: ['Apple']
 # Additionally, excessive or inconsistent use of type hints can lead to code clutter. 
 # It's essential to maintain a balance and prioritize readability.
 
-#=================================================================================
+#===============================================================================
 # 14. Descriptors
-#=================================================================================
+#===============================================================================
 
 # Descriptors in Python are a powerful feature that allows you to customize the behavior 
 # of attribute access (getting, setting, deleting) in classes. They provide a way to 
@@ -1040,9 +1040,9 @@ product = Product("Apple", 0.5, 10)  # Valid initialization
 # not carefully managed. Ensure you understand how attribute access works to avoid 
 # confusion.
 
-#=================================================================================
+#===============================================================================
 # 15. Context Managers
-#=================================================================================
+#===============================================================================
 
 # Context managers in Python provide a convenient way to manage resources, ensuring proper allocation and cleanup.
 # They allow setup and teardown actions to be executed automatically when entering and exiting a context.
@@ -1111,9 +1111,9 @@ with open_file("example.txt") as f:
 # Additionally, avoid performing long-running operations within the context manager's __enter__ or __exit__ methods,
 # as this can block other operations and degrade performance.
 
-#=================================================================================
+#===============================================================================
 # 16. Metaclasses
-#=================================================================================
+#===============================================================================
 
 # Metaclasses in Python are a deep and powerful feature that allows you to define how 
 # classes behave. A metaclass is a class of a class that defines how a class behaves.
@@ -1163,9 +1163,9 @@ print(s1 is s2)  # Output: True, confirming both variables refer to the same ins
 # Use metaclasses sparingly and only when the benefits of their capabilities outweigh the potential 
 # downsides of increased complexity. For many scenarios, decorators or simple inheritance will suffice.
 
-#=================================================================================
+#===============================================================================
 # 17. Best Practices and Tips
-#=================================================================================
+#===============================================================================
 
 # In this section, we outline best practices for class design and implementation in Python.
 # Adhering to these principles enhances code maintainability, readability, and overall structure.
