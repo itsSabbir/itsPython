@@ -1,6 +1,6 @@
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Python Cheat Sheet: File Handling
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # Python provides a variety of modules to work with file handling, covering a wide range of file types
 # and use cases including text files, binary files, compressed files, and even memory-mapped files.
@@ -153,9 +153,9 @@ print(memory_file.getvalue())  # Retrieves the content of the in-memory file.
 # even if an error occurs, preventing resource leakage.
 
 
-#=================================================================================
+#===============================================================================
 # 1. Reading and Writing Text Files
-#=================================================================================
+#===============================================================================
 
 # Basic file opening and reading example:
 # This snippet demonstrates how to open a text file in read mode ('r') and read its contents.
@@ -221,9 +221,9 @@ with open(file_path, 'r') as file:  # Opens the file in read mode
 # Opening a file without specifying a mode defaults to 'r' (read-only mode). Attempting to write to the file
 # without explicitly using 'w' or 'a' mode will raise an error. Always ensure the correct mode is used for your file operation.
 
-#=================================================================================
+#===============================================================================
 # 2. File Modes and Encoding
-#=================================================================================
+#===============================================================================
 
 # When opening a file in Python, you specify the mode in which the file is opened.
 # The mode defines how the file will be accessed: read, write, append, etc.
@@ -282,9 +282,9 @@ with open("example_image.jpg", 'rb') as binary_file:
 # - Explicitly specify 'encoding' when working with text to ensure consistent behavior across different platforms.
 # - Use binary mode ('b') for non-text files to avoid encoding-related issues.
 
-#=================================================================================
+#===============================================================================
 # 3. Working with Binary Files
-#=================================================================================
+#===============================================================================
 
 # Binary files store data in a raw binary format, unlike text files that store data as characters.
 # When dealing with binary files, we use specific modes: 'wb' (write binary) and 'rb' (read binary).
@@ -337,9 +337,9 @@ with open('binary_file.bin', 'rb') as file:
 # Always handle file operations within a 'with' block (context manager) to ensure that files are closed properly after operations, 
 # even if an error occurs. This ensures no data corruption or file locking issues.
 
-#=================================================================================
+#===============================================================================
 # 4. Working with Different File Formats
-#=================================================================================
+#===============================================================================
 
 # In this section, we cover how to work with CSV, JSON, and Pickle file formats in Python.
 # Each format has its own advantages and is used in different scenarios depending on the nature of the data.
@@ -452,9 +452,9 @@ with open('data.pickle', 'rb') as file:
 # - JSON is a widely-used format for structured data, with strong support for human readability and interoperability.
 # - Pickle allows you to serialize Python objects, but be cautious about its security risks when working with untrusted data.
 
-#=================================================================================
+#===============================================================================
 # 5. File and Directory Operations
-#=================================================================================
+#===============================================================================
 
 # This section demonstrates how to perform basic file and directory operations using the os and shutil modules.
 # These operations are essential for interacting with the filesystem, automating tasks, or managing data.
@@ -547,9 +547,9 @@ shutil.copytree('source_dir', 'destination_dir')  # Copies the entire 'source_di
 # os.scandir() returns an iterator that yields directory entries as os.DirEntry objects, offering better performance for large directories,
 # especially when you need to access file attributes such as file size, type, or modification time.
 
-#=================================================================================
+#===============================================================================
 # 6. Working with Paths
-#=================================================================================
+#===============================================================================
 
 # Python's os.path module offers utility functions for interacting with file system paths.
 # These functions are cross-platform, ensuring code runs on Windows, macOS, Linux, etc.
@@ -640,17 +640,17 @@ print(f"File extension: {extension}")
 # For platform-specific operations, consider the pathlib module introduced in Python 3.4, which offers an object-oriented approach to path handling with more powerful abstractions.
 
 
-#=================================================================================
+#===============================================================================
 # 7. Advanced File Operations
-#=================================================================================
+#===============================================================================
 
 # In this section, we'll cover two advanced file operations in Python:
 # 1. Using the 'fileinput' module for in-place file editing
 # 2. Using 'mmap' for memory-mapped file handling, which is particularly useful for large files.
 
-#=================================================================================
+#===============================================================================
 # Example 1: Using 'fileinput' to edit files in-place
-#=================================================================================
+#===============================================================================
 
 # The 'fileinput' module is a powerful tool when you need to process multiple files, 
 # allowing you to modify files directly without needing to open and close each one manually.
@@ -682,9 +682,9 @@ with fileinput.input(files=files_to_search, inplace=True) as f:
 # Potential pitfall: Be aware that if the original files are large, using fileinput might not be the most memory-efficient approach.
 # In cases where the files are large and you need more efficient file handling, consider using memory-mapped files (as discussed below).
 
-#=================================================================================
+#===============================================================================
 # Example 2: Memory-mapped files using 'mmap'
-#=================================================================================
+#===============================================================================
 
 # The 'mmap' module allows you to map a file into memory. This is extremely useful when working with large files.
 # Instead of reading the entire file into memory (which can be inefficient for large files), 'mmap' allows you to work with parts of the file.
@@ -726,9 +726,9 @@ with open('large_file.bin', 'rb') as f:  # 'rb' means read as binary
 # As a best practice, consider using 'mmap' for files that are larger than your system’s memory but require frequent access to specific sections.
 # For smaller files, traditional file I/O might be simpler and sufficient.
 
-#=================================================================================
+#===============================================================================
 # 8. Working with Compressed Files
-#=================================================================================
+#===============================================================================
 
 # Working with compressed files like gzip and zip is common when handling large datasets
 # or when trying to optimize disk space usage. Python provides built-in libraries like 
@@ -804,9 +804,9 @@ with zipfile.ZipFile('archive.zip', 'r') as zipf:
 # Additionally, avoid reading large files all at once (as done in the gzip example above) if memory constraints are a concern.
 # Instead, use chunked reads with 'readline()' or process the file in blocks.
 
-#=================================================================================
+#===============================================================================
 # 9. Temporary Files and Directories
-#=================================================================================
+#===============================================================================
 
 # The tempfile module in Python provides utilities for creating temporary files and directories.
 # These are particularly useful when you need to store data temporarily during execution
@@ -869,9 +869,9 @@ with tempfile.TemporaryDirectory() as temp_dir:
 # any attempts to access them afterward will raise an error.
 # Make sure to keep any data you need before the context manager ends.
 
-#=================================================================================
+#===============================================================================
 # 10. File-like Objects
-#=================================================================================
+#===============================================================================
 
 # Python provides in-memory file-like objects through the 'io' module, specifically StringIO and BytesIO.
 # These are very useful when you need file-like behavior without the overhead of creating actual files on disk.
@@ -923,9 +923,9 @@ bytes_io.close()  # Closing the BytesIO object
 # after writing, as the file pointer will be at the end after writing. Forgetting to seek() can lead to confusion when reading returns an empty result.
 # Also, don't forget to close these file-like objects when done to free up resources, although they don't hold onto system resources like real file objects do.
 
-#=================================================================================
+#===============================================================================
 # 11. Context Managers for File Handling
-#=================================================================================
+#===============================================================================
 
 # Context managers in Python are used to handle resource management, such as files, sockets, or database connections.
 # The 'with' statement simplifies resource management by ensuring proper acquisition and release of resources.
@@ -994,9 +994,9 @@ with FileManager('example.txt', 'r') as f:
 # - If using a custom context manager, make sure to understand the implications of returning True in __exit__, 
 #   as this can suppress exceptions and lead to hard-to-debug issues.
 
-#=================================================================================
+#===============================================================================
 # 12. Best Practices and Tips for File Operations in Python
-#=================================================================================
+#===============================================================================
 
 # When working with files in Python, there are several best practices and tips 
 # that will help you write cleaner, safer, and more efficient code. Here is a 
