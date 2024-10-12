@@ -1,10 +1,10 @@
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Python Cheat Sheet: Modules and Packages
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-#=================================================================================
+#===============================================================================
 # 1. Importing Modules
-#=================================================================================
+#===============================================================================
 
 # In Python, the 'import' statement allows you to bring in external modules or parts of modules
 # into your code, expanding its functionality without having to reinvent the wheel.
@@ -60,9 +60,9 @@ print(f"Cosine of pi: {cos(pi)}")  # Now you can call functions like 'cos' witho
 # - Use 'from <module> import <specific_function>' when you only need a few components and want cleaner code.
 # - Avoid 'import *' unless working in interactive environments or throwaway scripts where namespace pollution is not a concern.
 
-#=================================================================================
+#===============================================================================
 # 2. Creating Modules
-#=================================================================================
+#===============================================================================
 
 # In Python, a module is simply a file containing Python code (functions, variables, classes, etc.) 
 # that can be imported and reused across different scripts or programs. This is one of Python's 
@@ -152,9 +152,9 @@ print(person.say_hello())  # Output: Bob says hello!
 #   string manipulations). This separation improves maintainability and readability of the codebase.
 
 
-#=================================================================================
+#===============================================================================
 # 3. Exploring Built-in Modules
-#=================================================================================
+#===============================================================================
 
 # Python provides several built-in modules that extend its capabilities without the need for external libraries.
 # Some of the most commonly used modules include sys, os, and datetime.
@@ -229,9 +229,9 @@ print(f"Date 7 days from now: {future_date}")
 # Consider using the 'pytz' library for timezone-aware datetime objects when working across multiple time zones.
 
 
-#=================================================================================
+#===============================================================================
 # 4. Creating and Using Packages
-#=================================================================================
+#===============================================================================
 
 # A Python package is essentially a directory that contains multiple modules (Python files) 
 # and a special file named __init__.py, which indicates to Python that the directory should be treated as a package.
@@ -317,9 +317,9 @@ print(f"Square of 3: {calculate_square(3)}")  # Output: 9
 # Additionally, missing or misconfiguring the __init__.py file can lead to ImportError exceptions,
 # especially in complex multi-level packages.
 
-#=================================================================================
+#===============================================================================
 # 5. Module Search Path
-#=================================================================================
+#===============================================================================
 
 # In Python, when you import a module, the interpreter searches for it in several predefined locations.
 # These locations are stored in a list named 'sys.path', which is part of the 'sys' module.
@@ -379,9 +379,9 @@ sys.path.append('/path/to/your/module/directory')  # Replace with the actual pat
 
 
 
-#=================================================================================
+#===============================================================================
 # 6. Reloading a Module
-#=================================================================================
+#===============================================================================
 
 # In Python, when a module is imported using the 'import' statement, 
 # it is only loaded once during the program's runtime, even if the import statement is used multiple times. 
@@ -444,9 +444,9 @@ importlib.reload(mymodule)
 # where restarting the interpreter would disrupt the workflow or cause downtime.
 
 
-#=================================================================================
+#===============================================================================
 # 7. Exploring Module Attributes
-#=================================================================================
+#===============================================================================
 
 # Modules in Python are collections of functions and variables that can be used in various contexts.
 # The 'math' module provides mathematical functions, constants, and useful utilities for mathematical operations.
@@ -506,9 +506,9 @@ except AttributeError:
 # the foundational tools for exploring and understanding any module's functionality in Python.
 
 
-#=================================================================================
+#===============================================================================
 # 8. Creating a Module Dynamically
-#=================================================================================
+#===============================================================================
 
 # In Python, modules can be created dynamically at runtime, which can be useful in situations 
 # where you need to generate modules based on runtime conditions or data.
@@ -558,9 +558,9 @@ print(f"Dynamic variable: {dynamic_module.dynamic_variable}")  # Output: 42
 # 3. Code introspection tools might not recognize these dynamically created modules, 
 # making debugging and tooling support more challenging.
 
-#=================================================================================
+#===============================================================================
 # 9. Using __all__ in a Module
-#=================================================================================
+#===============================================================================
 
 # The __all__ attribute in a Python module is a list of public objects of that module,
 # dictating what is imported when a wildcard import is used (e.g., 'from module import *').
@@ -622,9 +622,9 @@ public_function()  # This will work because 'public_function' was listed in __al
 # It is good practice to use __all__ in larger or complex modules, especially in libraries or APIs where controlling access to functions or classes 
 # helps maintain a clean separation between internal and external functionality.
 
-#=================================================================================
+#===============================================================================
 # 10. Circular Imports
-#=================================================================================
+#===============================================================================
 
 # Circular imports occur when two or more modules attempt to import each other.
 # This can lead to import errors or unexpected behavior, as Python tries to load 
@@ -724,9 +724,9 @@ def use_file1():
 #   various aspects of the business logic but need to communicate with one another.
 
 
-#=================================================================================
+#===============================================================================
 # 11. Using Virtual Environments
-#=================================================================================
+#===============================================================================
 
 # A virtual environment in Python is an isolated environment that allows you to install and manage packages 
 # separately from the system-wide Python installation. This helps avoid conflicts between dependencies of different projects.
@@ -797,9 +797,9 @@ def use_file1():
 # especially when working on multiple projects. Avoid generic names like `venv`, which may cause confusion when switching between projects.
 
 
-#=================================================================================
+#===============================================================================
 # 12. Package Management with pip
-#=================================================================================
+#===============================================================================
 
 # 'pip' is Python's package installer, allowing for the installation, management, and uninstallation of packages.
 # It is essential for managing dependencies in Python projects and ensures that the right versions of packages 
