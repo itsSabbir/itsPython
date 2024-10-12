@@ -85,9 +85,9 @@ try_except_else_finally()
 # 'finally' is particularly useful when dealing with resources like file I/O or database connections,
 # where you need to ensure proper cleanup (closing files, releasing locks, etc.), regardless of whether the try block succeeds or fails.
 
-#=================================================================================
+#===============================================================================
 # 2. Catching the Exception Object
-#=================================================================================
+#===============================================================================
 
 # In Python, exception handling is done using the 'try-except' block.
 # When an exception is raised in the 'try' block, the 'except' block is executed.
@@ -137,9 +137,9 @@ catch_exception_object()
 # unless you're dealing with unpredictable errors that need a general safety net.
 
 
-#=================================================================================
+#===============================================================================
 # 3. Catching Multiple Exceptions
-#=================================================================================
+#===============================================================================
 
 # In Python, when working with exception handling, multiple types of exceptions can be caught 
 # using separate 'except' blocks. This allows for handling specific error cases individually.
@@ -216,9 +216,9 @@ def multiple_exceptions():
 # Always aim to catch only those exceptions that you can recover from or that require specific handling.
 # It's important to provide meaningful error messages to users or log exceptions to aid in troubleshooting.
 
-#=================================================================================
+#===============================================================================
 # 4. Catching Multiple Exceptions in One Line
-#=================================================================================
+#===============================================================================
 
 # Python allows multiple exceptions to be caught in a single 'except' block by grouping them in parentheses.
 # This is useful when multiple types of exceptions need to be handled in the same manner, 
@@ -270,9 +270,9 @@ def multiple_exceptions_one_line():
 # Grouping too many exception types together can make debugging harder, as the code will handle different errors in the same way,
 # potentially masking specific issues. If different handling is required for each error type, it's better to use separate 'except' blocks.
 
-#=================================================================================
+#===============================================================================
 # 5. Catching All Exceptions (use sparingly)
-#=================================================================================
+#===============================================================================
 
 # In Python, exception handling is critical for making your code robust and preventing unexpected crashes.
 # The try-except block allows you to "catch" exceptions and handle them appropriately.
@@ -330,9 +330,9 @@ catch_all()
 # against multiple possible exceptions without halting the application. Always ensure error logging is in place to track 
 # these unexpected exceptions, and aim to catch specific exceptions wherever possible for better code reliability.
 
-#=================================================================================
+#===============================================================================
 # 6. Else Clause in try-except blocks
-#=================================================================================
+#===============================================================================
 
 # The 'else' clause in a try-except block is often underutilized but can be very useful
 # for keeping code cleaner and separating logic. The 'else' block runs only if no exception
@@ -385,9 +385,9 @@ def try_except_else():
 # Anything that doesn't need exception handling should ideally be placed in the 'else' block or outside the 'try-except' altogether.
 # This practice reduces the chances of accidentally catching unexpected exceptions, leading to more predictable behavior.
 
-#=================================================================================
+#===============================================================================
 # 7. try-except-finally structure
-#=================================================================================
+#===============================================================================
 
 # The 'try-except-finally' block in Python is used for exception handling.
 # It allows you to catch and handle errors while ensuring that certain cleanup code 
@@ -450,9 +450,9 @@ try_except_finally()
 # However, understanding the 'try-except-finally' structure is still crucial for more complex 
 # resource management scenarios where context managers may not apply.
 
-#=================================================================================
+#===============================================================================
 # 8. Combining Else and Finally in exception handling
-#=================================================================================
+#===============================================================================
 
 # The 'try-except-else-finally' structure in Python allows for robust and clear error handling.
 # This example demonstrates how 'else' and 'finally' blocks are integrated within exception handling.
@@ -533,9 +533,9 @@ def full_exception_handling():
 # 2. Neglecting to use the 'else' block when appropriate can lead to code that mixes normal logic with exception-handling logic, reducing clarity.
 # 3. Avoid placing critical code inside the 'finally' block that depends on the success of the 'try' block, as 'finally' always runs.
 
-#=================================================================================
+#===============================================================================
 # 9. Raising Exceptions
-#=================================================================================
+#===============================================================================
 
 # Raising exceptions is a fundamental way to handle invalid or unexpected conditions
 # in Python. When an error condition is detected, the 'raise' statement is used to
@@ -606,9 +606,9 @@ raising_exceptions()  # Output: Invalid age: Age is too high.
 # Combine with try-except blocks to handle exceptions and prevent program crashes.
 # Raising meaningful exceptions improves the clarity and robustness of your code.
 
-#=================================================================================
+#===============================================================================
 # 10. Re-raising Exceptions
-#=================================================================================
+#===============================================================================
 
 # Re-raising exceptions is a technique used when you want to catch an exception, handle part of it,
 # but still allow the exception to propagate up the call stack for further handling.
@@ -664,9 +664,9 @@ except ZeroDivisionError:
 # For complex exceptions, consider using the 'raise from' syntax (Python 3 only), 
 # which allows chaining exceptions and provides more context when exceptions are re-raised due to failures in nested try blocks.
 
-#=================================================================================
+#===============================================================================
 # 11. Custom Exceptions
-#=================================================================================
+#===============================================================================
 
 # Custom exceptions allow you to define error conditions that are specific to your application or use case.
 # They provide more meaningful error messages and can include additional context such as error codes or other data.
@@ -725,9 +725,9 @@ except CustomError as e:
 # If not used judiciously, custom exceptions can lead to unnecessary complexity.
 # As a best practice, always inherit from built-in exceptions unless you need very specific behavior that can't be achieved otherwise.
 
-#=================================================================================
+#===============================================================================
 # 12. Exception Hierarchy
-#=================================================================================
+#===============================================================================
 
 # Python's exception handling system follows a hierarchy, where some exceptions are subclasses of more general ones.
 # This is important because specific exceptions should be caught before general ones in a `try-except` block to avoid unintended behavior.
@@ -786,9 +786,9 @@ exception_hierarchy()  # Output: Caught a keyboard interrupt
 # - Only catch exceptions you know how to handle. If unsure about handling an exception, it is often better to let it propagate rather than obscure the root cause of a failure.
 
 
-#=================================================================================
+#===============================================================================
 # 13. Using assert Statements
-#=================================================================================
+#===============================================================================
 
 # The 'assert' statement in Python is primarily used for debugging purposes.
 # It allows the developer to set a condition that must be true; if it evaluates to False, 
@@ -844,9 +844,9 @@ except AssertionError as e:
 # Remember, assertions can be disabled in optimized mode, so relying on them for important checks is unsafe.
 # In production code, use proper exception handling (try-except) or conditional checks instead of assert.
 
-#=================================================================================
+#===============================================================================
 # 14. Context Managers for Exception Handling
-#=================================================================================
+#===============================================================================
 
 # Context managers are used to manage resources like file operations, database connections, or network sockets.
 # They ensure that resources are properly acquired and released, even if an exception occurs.
@@ -909,9 +909,9 @@ with managed_resource() as resource:
 # Tip:
 # Use context managers for any resource that needs explicit setup and teardown (e.g., opening/closing files, connecting/disconnecting from services, or locking/unlocking in multi-threading).
 
-#=================================================================================
+#===============================================================================
 # 15. Chaining Exceptions (Python 3.3+)
-#=================================================================================
+#===============================================================================
 
 # Python introduced exception chaining in version 3.3, allowing you to raise a new exception
 # while keeping the original exception context. This is useful for providing more detail about
@@ -975,9 +975,9 @@ chain_exceptions()
 # Use explicit chaining (`from`) when a higher-level exception adds meaningful context to the lower-level error.
 # Implicit chaining should be understood but managed carefully to avoid convoluted error messages.
 
-#=================================================================================
+#===============================================================================
 # 16. Suppressing Exceptions (Python 3.3+)
-#=================================================================================
+#===============================================================================
 
 # This example demonstrates how to suppress the original exception when raising a new one.
 # In Python 3.3+, the 'raise ... from' syntax allows you to chain exceptions, which is useful
@@ -1039,9 +1039,9 @@ suppress_exception()
 #   one. In some cases, chaining exceptions without suppression (i.e., without 'from None') 
 #   might offer better visibility for debugging purposes.
 
-#=================================================================================
+#===============================================================================
 # 17. Exception Groups (Python 3.11+)
-#=================================================================================
+#===============================================================================
 
 # Exception groups, introduced in Python 3.11, provide a way to handle multiple exceptions
 # raised during execution as a single "group" of exceptions.
@@ -1104,9 +1104,9 @@ except* ValueError as eg:  # The 'except*' syntax catches exceptions of the spec
 # Ensure that you clearly distinguish between 'except' and 'except*'—the former catches
 # a single exception (or its subclasses), while the latter catches exceptions of a specific type within an ExceptionGroup.
 
-#=================================================================================
+#===============================================================================
 # 18. Best Practices and Tips for Exception Handling in Python
-#=================================================================================
+#===============================================================================
 
 # Exception handling is a critical part of writing robust and maintainable Python code.
 # It helps you gracefully manage errors and edge cases in your application.
@@ -1230,9 +1230,9 @@ for i in range(1000000):
 # Advanced tip: 
 # It's generally better to handle exceptions outside the loop in most cases unless each iteration requires independent handling.
 
-#=================================================================================
+#===============================================================================
 # 19. Debugging with pdb (Python Debugger)
-#=================================================================================
+#===============================================================================
 
 # The Python Debugger (pdb) is a powerful tool for debugging your code.
 # It allows you to set breakpoints, inspect variables, step through code line by line, 
