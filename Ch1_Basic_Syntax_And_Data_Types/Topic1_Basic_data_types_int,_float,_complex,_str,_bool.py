@@ -1,5 +1,5 @@
 """
-Expert-Level Cheat Sheet: Basic Syntax and Data Types - Basic data types (int, float, complex, str, bool) - in the Python Programming Language
+Expert-Level Notes Sheet: Basic Syntax and Data Types - Basic data types (int, float, complex, str, bool) - in the Python Programming Language
 
 Table of Contents:
 1. Overview and Historical Context
