@@ -904,7 +904,7 @@ def memory_management_and_resource_optimization():
     # processing large datasets.
     # Advanced Insight: Generators are an excellent choice for 'lazy evaluation' where
     # not all elements need to be stored in memory at once.
-    gen_exp = (x2 for x in range(1000000))
+    gen_exp = (for x in range(1000000))
     print(f"Generator expression created for large dataset to save memory.")
 
     # Using __slots__ in classes to reduce memory overhead
