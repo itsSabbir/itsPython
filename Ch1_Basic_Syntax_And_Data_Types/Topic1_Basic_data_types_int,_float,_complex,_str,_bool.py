@@ -175,7 +175,7 @@ def integer_examples():
     print(f"Division (float result): {a} / {b} = {a / b}")  # Regular division produces a float result
     print(f"Integer division: {a} // {b} = {a // b}")  # Floor division results in an integer
     print(f"Modulo: {a} % {b} = {a % b}")  # Remainder of division operation
-    print(f"Exponentiation: {a}  {b} = {a ** b}")  # `a` raised to the power `b`
+    print(f"Exponentiation: {a} ** {b} = {a ** b}") # `a` raised to the power `b`
 
     # Best Practice: Prefer `//` over `/` when you need an integer result to avoid potential type issues.
 
@@ -434,7 +434,7 @@ def type_conversion_examples():
     #
     # Advanced Tip: Use `ast.literal_eval` for safer type conversion when handling unknown input. It evaluates strings 
     # containing Python literals (e.g., numbers, booleans) and avoids the security risks associated with `eval()`.
-
+ 
 def advanced_usage_examples():
     """
     Demonstrates advanced usage of basic data types.
@@ -904,7 +904,7 @@ def memory_management_and_resource_optimization():
     # processing large datasets.
     # Advanced Insight: Generators are an excellent choice for 'lazy evaluation' where
     # not all elements need to be stored in memory at once.
-    gen_exp = (for x in range(1000000))
+    gen_exp = (x**2 for x in range(1000000))
     print(f"Generator expression created for large dataset to save memory.")
 
     # Using __slots__ in classes to reduce memory overhead
@@ -1053,7 +1053,9 @@ def handling_edge_cases_in_complex_systems():
 
 
 if __name__ == "__main__":
-    # Main execution
+    # Run main function to demonstrate all examples
+    main()
+    # Additional specialized demonstrations
     memory_management_and_resource_optimization()
     handling_edge_cases_in_complex_systems()
 
