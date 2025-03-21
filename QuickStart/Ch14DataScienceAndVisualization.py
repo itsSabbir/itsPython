@@ -73,9 +73,9 @@ plt.show()  # Displaying the plot
 # - While Seaborn offers convenient plotting functions, always verify the underlying data, especially in aggregate plots.
 
 
-#=================================================================================
+#===============================================================================
 # 1. NumPy
-#=================================================================================
+#===============================================================================
 
 # NumPy is a powerful library in Python used for numerical computing. 
 # It provides support for arrays, matrices, and many mathematical functions to operate on these data structures.
@@ -165,9 +165,9 @@ print(a @ b)  # Same as np.dot(a, b), Result: [[19 22]
 # statistical analysis, and linear algebra operations, significantly enhancing your data analysis capabilities.
 
 
-#=================================================================================
+#===============================================================================
 # 2. Pandas
-#=================================================================================
+#===============================================================================
 
 # Pandas is a powerful data manipulation and analysis library for Python. 
 # It provides data structures like DataFrame and Series for handling structured data.
@@ -264,9 +264,9 @@ ts = pd.Series(np.random.randn(1000), index=pd.date_range('1/1/2000', periods=10
 print(ts.resample('M').mean())  # Resamples the time series to monthly frequency and calculates the mean.
 print(ts.rolling(window=7).mean())  # Computes the 7-day rolling average for smoothing data.
 
-#=================================================================================
+#===============================================================================
 # 3. Matplotlib
-#=================================================================================
+#===============================================================================
 
 # Matplotlib is a powerful plotting library in Python used for creating static, animated, and interactive visualizations.
 # Below are various examples demonstrating how to create different types of plots.
@@ -383,9 +383,9 @@ with plt.style.context('dark_background'):
     plt.show()  # Display the plot
 
 
-#=================================================================================
+#===============================================================================
 # 4. Seaborn
-#=================================================================================
+#===============================================================================
 
 # Seaborn is a powerful Python data visualization library built on top of Matplotlib.
 # It provides a high-level interface for drawing attractive statistical graphics.
@@ -463,9 +463,9 @@ plt.show()  # Displays the plot
 # Advanced tip: Always consider the context and audience for your visualizations, and customize accordingly for clarity.
 
 
-#=================================================================================
+#===============================================================================
 # Tips and Tricks
-#=================================================================================
+#===============================================================================
 
 # In this section, we provide tips and tricks for enhancing performance and usability 
 # in data analysis and visualization using libraries such as NumPy, Pandas, and Matplotlib.

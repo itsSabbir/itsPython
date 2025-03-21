@@ -1,6 +1,6 @@
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Python Cheat Sheet: Web Development
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # Web development in Python can be achieved using various frameworks, with Flask and Django being two of the most popular.
 # This section provides an overview of key components from both frameworks, along with relevant imports for common tasks.
@@ -104,9 +104,9 @@ class UserViewSet(viewsets.ModelViewSet):  # ViewSet for user operations
 # For production, consider setting debug mode to false and using environment variables for sensitive configurations.
 
 
-#=================================================================================
+#===============================================================================
 # 1. Flask Web Framework
-#=================================================================================
+#===============================================================================
 
 # Flask is a lightweight WSGI web application framework in Python.
 # It is designed to make it easy to get started and to scale up to complex applications.
@@ -213,9 +213,9 @@ api.add_resource(HelloWorld, '/')  # Adding the HelloWorld resource to the API.
 # Following best practices, such as utilizing Flask extensions and maintaining clean code structure,
 # ensures a scalable and maintainable application architecture.
 
-#=================================================================================
+#===============================================================================
 # 2. Django Web Framework
-#=================================================================================
+#===============================================================================
 
 # Django is a high-level Python web framework that encourages rapid development 
 # and clean, pragmatic design. Below are the foundational steps and best practices 
@@ -330,9 +330,9 @@ class PostViewSet(viewsets.ModelViewSet):
 # DRF's structure encourages clean code and allows rapid development of RESTful services 
 # with built-in features for authentication, permissions, and serialization.
 
-#=================================================================================
+#===============================================================================
 # 3. Web Scraping with Beautiful Soup
-#=================================================================================
+#===============================================================================
 
 # Web scraping is a powerful technique for extracting information from websites.
 # Beautiful Soup is a popular Python library used for parsing HTML and XML documents.
@@ -381,9 +381,9 @@ else:
 # - Use User-Agent headers to mimic a web browser, which may help avoid blocks from some websites.
 # - For larger scraping projects, consider using libraries like Scrapy, which offer more features for web scraping.
 
-#=================================================================================
+#===============================================================================
 # 4. Asynchronous Web Development with FastAPI
-#=================================================================================
+#===============================================================================
 
 # FastAPI is a modern, fast (high-performance) web framework for building APIs with Python 3.7+.
 # It is based on standard Python type hints and async features, enabling quick and easy development of APIs.
@@ -432,9 +432,9 @@ async def create_item(item: Item):
 # - Keep in mind that using async/await correctly requires a good understanding of Python's event loop and concurrency model.
 # Misusing these concepts can lead to unexpected behaviors or deadlocks, particularly in complex applications.
 
-#=================================================================================
+#===============================================================================
 # 5. Web Sockets with Flask-SocketIO
-#=================================================================================
+#===============================================================================
 
 # This section demonstrates how to set up a WebSocket connection using Flask-SocketIO.
 # WebSockets enable real-time, bi-directional communication between clients and servers,
@@ -485,9 +485,9 @@ if __name__ == '__main__':
 # - Monitor performance and scalability, as maintaining many open WebSocket connections can strain server resources.
 # - Consider security measures, such as authentication for WebSocket connections, to prevent unauthorized access.
 
-#=================================================================================
+#===============================================================================
 # 6. Security Considerations
-#=================================================================================
+#===============================================================================
 
 # In this section, we discuss essential security practices in web applications built with Flask.
 # These practices help prevent common vulnerabilities like Cross-Site Request Forgery (CSRF),
@@ -542,9 +542,9 @@ user = User.query.filter_by(username=username).first()  # This is safe, as SQLAl
 
 print("Always use parameterized queries to prevent SQL injection.")
 
-#=================================================================================
+#===============================================================================
 # 7. Deployment
-#=================================================================================
+#===============================================================================
 
 # In this section, we discuss key practices and commands involved in deploying a Python web application.
 # Proper deployment ensures that your application runs efficiently and securely in a production environment.
@@ -596,9 +596,9 @@ print('"""')  # Ending the block comment for Dockerfile content
 print("Tip: Use environment variables for sensitive information in production for better security.")
 # Consider using libraries like python-dotenv to manage environment variables more easily during development.
 
-#=================================================================================
+#===============================================================================
 # 8. Testing Web Applications
-#=================================================================================
+#===============================================================================
 
 # In this section, we explore testing web applications using popular Python frameworks:
 # Flask and Django. Effective testing ensures that web applications behave as expected 
@@ -661,9 +661,9 @@ class PostTestCase(TestCase):
 # - Writing tests that are too complex can make them difficult to maintain; strive for simplicity.
 # - Over-reliance on manual testing without automated tests may lead to oversights in functionality.
 
-#=================================================================================
+#===============================================================================
 # 9. API Design Best Practices
-#=================================================================================
+#===============================================================================
 
 # This section highlights best practices for designing APIs, specifically focusing on RESTful principles.
 # Proper API design enhances usability, maintainability, and scalability.
@@ -725,9 +725,9 @@ def api_v1_posts():
 # Advanced tip: Utilize hypermedia (HATEOAS) in your API design to provide clients with dynamic links to related resources.
 # This can enhance navigation and interactivity within your API, leading to a more intuitive user experience.
 
-#=================================================================================
+#===============================================================================
 # 10. Performance Optimization
-#=================================================================================
+#===============================================================================
 
 # In this section, we discuss various strategies for optimizing the performance of web applications
 # by leveraging caching and database query optimization techniques, along with best practices.

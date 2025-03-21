@@ -100,9 +100,9 @@ for number in generate_numbers():
 # Python's full potential in various domains and applications.
 
 
-#=================================================================================
+#===============================================================================
 # 1. Iterators and Generators
-#=================================================================================
+#===============================================================================
 
 # In this section, we explore the concepts of iterators and generators in Python.
 # Both provide ways to iterate over sequences, but they have distinct implementations and use cases.
@@ -172,9 +172,9 @@ print("Squares:", list(squares))  # Output: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
 # as they only generate values on demand and do not store the entire result set in memory.
 
 
-#=================================================================================
+#===============================================================================
 # 2. Decorators
-#=================================================================================
+#===============================================================================
 
 # In Python, decorators are a powerful tool that allows you to modify the behavior of functions or classes.
 # They enable code reuse and can enhance the functionality of existing code without changing its structure.
@@ -255,9 +255,9 @@ say_hello("Alice")
 # Tip: Use decorator factories (decorators with arguments) for more flexible decorators
 # This approach enhances reusability and configurability of decorators, allowing you to create more dynamic behavior.
 
-#=================================================================================
+#===============================================================================
 # 3. Context Managers
-#=================================================================================
+#===============================================================================
 
 # Context managers are a powerful feature in Python that enable resource management 
 # and ensure proper cleanup of resources such as file handles, network connections, etc.
@@ -337,9 +337,9 @@ with ExceptionHandlingFileManager() as log_file:
 # By understanding and leveraging context managers, developers can write cleaner, 
 # more reliable code that effectively manages resources and handles errors.
 
-#=================================================================================
+#===============================================================================
 # 4. Coroutines and Asyncio
-#=================================================================================
+#===============================================================================
 
 # In Python, coroutines and the asyncio library facilitate asynchronous programming,
 # allowing for concurrent execution of I/O-bound tasks without blocking the main thread.
@@ -397,9 +397,9 @@ asyncio.run(main())
 # As a best practice, always handle exceptions within coroutines to avoid unhandled promise rejections,
 # and keep an eye on the scalability of your coroutines to ensure efficient use of system resources.
 
-#=================================================================================
+#===============================================================================
 # 5. Metaclasses
-#=================================================================================
+#===============================================================================
 
 # Metaclasses in Python are a powerful feature that allows developers to customize
 # class creation. They define the behavior of a class, similar to how classes define 
@@ -450,9 +450,9 @@ print(s1 is s2)  # Output: True
 # 3. Be cautious with inheritance; ensure that the behavior of subclasses aligns with 
 # the intended metaclass logic to avoid unexpected behaviors.
 
-#=================================================================================
+#===============================================================================
 # 6. Descriptor Protocol
-#=================================================================================
+#===============================================================================
 
 # Descriptors provide a powerful way to manage attribute access and validation in Python.
 # They allow you to customize the behavior of attribute access through method overrides.
@@ -514,9 +514,9 @@ print(person.age)  # Output: 30, retrieves the age using the __get__ method
 # in the context where they are applied. Additionally, be mindful of performance overheads 
 # with descriptors as they add an extra layer of function calls for attribute access.
 
-#=================================================================================
+#===============================================================================
 # 7. Function Caching
-#=================================================================================
+#===============================================================================
 
 # Function caching is a powerful optimization technique that stores the results of expensive function calls.
 # By caching, subsequent calls with the same arguments can return results instantly without recomputation.
@@ -565,9 +565,9 @@ print(f"Time taken: {end - start} seconds")  # Output the time elapsed for funct
 # - To clear the cache programmatically, use the fibonacci_cached.cache_clear() method. This can be useful during testing 
 #   or when you want to ensure that the function re-evaluates its results after changes to underlying data or logic.
 
-#=================================================================================
+#===============================================================================
 # 8. Itertools Module
-#=================================================================================
+#===============================================================================
 
 # The itertools module in Python provides a suite of fast, memory-efficient tools
 # for working with iterators. It allows for the creation of iterators for efficient looping.
@@ -631,9 +631,9 @@ print(list(itertools.chain(['A', 'B'], ['C', 'D'])))  # Output: ['A', 'B', 'C', 
 # Additionally, ensure that your selector iterable in functions like compress
 # is the same length as the input iterable to avoid unexpected behavior.
 
-#=================================================================================
+#===============================================================================
 # 9. Functools Module
-#=================================================================================
+#===============================================================================
 
 # The functools module in Python provides higher-order functions and operations on callable objects.
 # This module is essential for functional programming paradigms in Python.
@@ -676,9 +676,9 @@ print(functools.reduce(lambda x, y: x * y, [1, 2, 3, 4, 5]))
 # Overusing partial functions may lead to less readable code if used excessively, especially when the partial functions are deeply nested.
 # Always aim for code that balances clarity and efficiency.
 
-#=================================================================================
+#===============================================================================
 # 10. Type Hinting and Generics
-#=================================================================================
+#===============================================================================
 
 # Type hinting in Python enhances code readability and maintainability by explicitly indicating the expected types of variables, 
 # function parameters, and return values. It is particularly useful for static type checkers and IDEs that provide type checking 
@@ -729,9 +729,9 @@ print(stack.pop())  # Output: 2 - Pops the last item added (2) from the stack
 # without duplicating code. For example, a generic Stack can be used for integers, strings, or any custom objects.
 # By specifying the type when creating the stack, you ensure that only items of that type can be pushed onto it.
 
-#=================================================================================
+#===============================================================================
 # 11. Advanced Comprehensions
-#=================================================================================
+#===============================================================================
 
 # In this section, we explore advanced comprehensions in Python,
 # which provide a concise way to create lists, dictionaries, and sets.
@@ -777,9 +777,9 @@ print("Squares of even numbers:", squares)  # Output: {0: 0, 2: 4, 4: 16, 6: 36,
 #    If you find yourself nesting comprehensions beyond two levels, it's usually a sign to rethink
 #    your approach or break the logic into separate steps.
 
-#=================================================================================
+#===============================================================================
 # 12. Context Variables (Python 3.7+)
-#=================================================================================
+#===============================================================================
 
 # Context variables are a powerful feature introduced in Python 3.7,
 # providing a way to manage state in a thread-safe manner, particularly useful in asynchronous programming.
@@ -834,9 +834,9 @@ print(f"After processing: {request_id.get()}")  # Output: After processing: None
 # In summary, context variables are a powerful tool for managing state in Python applications, especially in async contexts.
 # Proper use can lead to cleaner, more maintainable code that handles state effectively without side effects.
 
-#=================================================================================
+#===============================================================================
 # 13. Structural Pattern Matching (Python 3.10+)
-#=================================================================================
+#===============================================================================
 
 # Structural pattern matching, introduced in Python 3.10, allows for more expressive and readable 
 # conditional branching based on the structure of data, particularly useful for handling complex conditions.
@@ -894,9 +894,9 @@ match data:
 # It is important to balance readability with the complexity of patterns; avoid nesting too many patterns deep, 
 # which can obscure the code's intention. Aim for clarity in both your matching patterns and overall structure.
 
-#=================================================================================
+#===============================================================================
 # 14. Advanced Sorting
-#=================================================================================
+#===============================================================================
 
 # In this section, we explore advanced sorting techniques in Python.
 # Sorting is a fundamental operation that can be customized using key functions and multiple criteria.
@@ -947,9 +947,9 @@ print("Data sorted by age then name:", sorted_data)
 # Also, ensure the key function returns consistent types; mixed types can lead to unexpected results 
 # or errors during sorting.
 
-#=================================================================================
+#===============================================================================
 # 15. Advanced Unpacking
-#=================================================================================
+#===============================================================================
 
 # In Python, advanced unpacking provides powerful ways to assign values from iterables
 # to multiple variables, enhancing code clarity and flexibility.

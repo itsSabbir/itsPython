@@ -1,6 +1,6 @@
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Python Cheat Sheet: Testing
-#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 # In this section, we explore various testing frameworks and tools in Python.
 # Understanding these can significantly improve the reliability and quality of your code.
@@ -104,9 +104,9 @@ class AsyncTestExample(asynctest.TestCase):
 # Using the appropriate testing framework can help create robust applications by ensuring correctness and reliability.
 
 
-#=================================================================================
+#===============================================================================
 # 1. Unit Testing with unittest
-#=================================================================================
+#===============================================================================
 
 # Unit testing is a critical practice in software development, ensuring that individual components work as intended.
 # The unittest module provides a framework for creating and running tests in Python.
@@ -195,9 +195,9 @@ class TestParameterized(unittest.TestCase):
 # Tip: Use subTest for parameterized tests to get granular test results.
 # This approach allows each test case to be reported separately, making it easier to identify issues.
 
-#=================================================================================
+#===============================================================================
 # 2. Mocking
-#=================================================================================
+#===============================================================================
 
 # Mocking is a technique used in unit testing to isolate components of the code and simulate their behavior.
 # It helps in testing specific functionalities without relying on the actual implementations of dependencies.
@@ -256,9 +256,9 @@ class TestGreetUser(unittest.TestCase):
 # - It's essential to understand the behavior of the mocked object well; incorrect mock setups can lead to misleading test results.
 # - Mocking should not replace good testing practices; ensure the real components are still tested in integration or functional tests.
 
-#=================================================================================
+#===============================================================================
 # 3. pytest
-#=================================================================================
+#===============================================================================
 
 # pytest is a powerful testing framework for Python that simplifies writing and running tests.
 # It provides features such as test discovery, fixtures, parameterized tests, and more.
@@ -334,9 +334,9 @@ def test_get_os_name(monkeypatch):
 # Following best practices, such as keeping tests focused and utilizing fixtures effectively, 
 # leads to cleaner and more maintainable test suites.
 
-#=================================================================================
+#===============================================================================
 # 4. Doctests
-#=================================================================================
+#===============================================================================
 
 # Doctests provide a way to test code by including examples in the docstring of functions.
 # They allow you to verify that the code behaves as documented, ensuring that examples in 
@@ -381,9 +381,9 @@ print(multiply(2, 3))  # Expected output: 6
 print(multiply(-1, 4))  # Expected output: -4
 print(multiply(0, 5))  # Expected output: 0 (multiplying by zero)
 
-#=================================================================================
+#===============================================================================
 # 5. Property-based testing with Hypothesis
-#=================================================================================
+#===============================================================================
 
 # Property-based testing is a testing methodology that focuses on specifying the properties
 # that the output of a function should exhibit rather than writing specific input/output pairs.
@@ -426,9 +426,9 @@ def test_add_commutative(a, b):
 # - Ensure that properties defined are genuinely applicable to the function under test. 
 # Misdefined properties can lead to false positives or negatives in testing results.
 
-#=================================================================================
+#===============================================================================
 # 6. Testing asynchronous code
-#=================================================================================
+#===============================================================================
 
 # Asynchronous programming in Python allows for non-blocking operations, which is crucial
 # for I/O-bound tasks like web requests. When testing asynchronous code, it's important
@@ -484,9 +484,9 @@ class TestAsyncAddFail(asynctest.TestCase):
 # When running this test case, you would see an error indicating that the assertion failed,
 # which is useful for debugging and ensuring that your function behaves as expected.
 
-#=================================================================================
+#===============================================================================
 # 7. Test Coverage
-#=================================================================================
+#===============================================================================
 
 # Test coverage measures the percentage of your code that is tested by your test suite.
 # It provides insight into untested parts of your application and helps identify areas that may need more testing.
@@ -535,9 +535,9 @@ print("Generating detailed HTML coverage report...")
 # A high coverage percentage does not guarantee the absence of bugs; it merely indicates that your tests executed certain lines of code.
 # Focus on writing meaningful tests that cover various scenarios, including edge cases, to enhance the reliability of your software.
 
-#=================================================================================
+#===============================================================================
 # 8. Tox for testing across multiple Python versions
-#=================================================================================
+#===============================================================================
 
 # Tox is a popular testing tool for Python that helps automate testing in multiple environments.
 # It is particularly useful for ensuring that your code is compatible with different Python versions.
@@ -594,9 +594,9 @@ commands = pytest  # Command to run the tests using pytest
 # 3. Tox might introduce complexity in setup for newcomers; providing clear documentation on how to run it
 # and what each environment is for will improve collaboration within a team.
 
-#=================================================================================
+#===============================================================================
 # 9. Continuous Integration
-#=================================================================================
+#===============================================================================
 
 # Continuous Integration (CI) is a software development practice that encourages developers to integrate their code 
 # into a shared repository frequently. Each integration is verified by an automated build and automated tests to 
@@ -646,9 +646,9 @@ script:  # Commands to run the tests.
 
 # Overall, setting up Continuous Integration with tools like Travis CI is a fundamental practice in modern software development, promoting quality, collaboration, and efficiency.
 
-#=================================================================================
+#===============================================================================
 # 10. Best Practices
-#=================================================================================
+#===============================================================================
 
 # This section outlines best practices for writing tests in Python.
 # Following these principles can enhance code reliability and maintainability,

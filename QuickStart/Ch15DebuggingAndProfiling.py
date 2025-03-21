@@ -1,6 +1,6 @@
-#=================================================================================
+#===============================================================================
 # Python Cheat Sheet: Debugging and Profiling
-#=================================================================================
+#===============================================================================
 
 # In this section, we will cover debugging techniques using pdb (Python Debugger),
 # which is a powerful tool for inspecting and controlling code execution in Python.
@@ -65,9 +65,9 @@ if x > 5:  # Conditional check
 # making it easier to track down and resolve issues in your code.
 # Always ensure to remove or disable breakpoints in production code to avoid unintended behavior.
 
-#=================================================================================
+#===============================================================================
 # 2. Debugging with IDEs
-#=================================================================================
+#===============================================================================
 
 # Debugging is a critical skill in software development, allowing developers to identify and resolve errors effectively.
 # Most Integrated Development Environments (IDEs) like PyCharm and Visual Studio Code come equipped with powerful graphical debuggers.
@@ -141,9 +141,9 @@ print("Set a conditional breakpoint for specific variable states")  # This allow
 # Example:
 print("Balance debugging with thorough testing and code reviews")  # Maintain good practices to ensure code quality
 
-#=================================================================================
+#===============================================================================
 # 3. Logging for Debugging
-#=================================================================================
+#===============================================================================
 
 # The logging module in Python is a powerful tool for tracking events that happen 
 # during execution, which can be incredibly helpful for debugging and monitoring applications.
@@ -209,9 +209,9 @@ except ZeroDivisionError:
 # 2. Failing to set appropriate logging levels can lead to missed important messages or an overload of insignificant logs.
 # 3. Not configuring log file handling can lead to lost logs in the event of application crashes or high-load scenarios.
 
-#=================================================================================
+#===============================================================================
 # 4. Assertions for Debugging
-#=================================================================================
+#===============================================================================
 
 # Assertions are a debugging aid that tests a condition as a way to catch 
 # programming errors. If the condition evaluates to False, an AssertionError 
@@ -263,9 +263,9 @@ except AssertionError as e:
 # disabled. Assertions serve well for sanity checks during development.
 
 
-#=================================================================================
+#===============================================================================
 # 5. Profiling Code for Performance
-#=================================================================================
+#===============================================================================
 
 # Profiling is essential for identifying bottlenecks in code and optimizing performance.
 # This section covers tools for profiling CPU and memory usage in Python programs.
@@ -334,9 +334,9 @@ def memory_hungry_function():
 # of your code. Make sure to profile in a realistic environment to gather accurate data for optimization.
 
 
-#=================================================================================
+#===============================================================================
 # 6. Timing Code Execution
-#=================================================================================
+#===============================================================================
 
 # Timing code execution is crucial for performance optimization, helping developers 
 # identify bottlenecks and improve efficiency. Python provides various tools to measure 
@@ -389,9 +389,9 @@ print(f"Average execution time: {average_execution_time} seconds")  # Print the 
 # in the application, as benchmarks can vary significantly based on different factors.
 
 
-#=================================================================================
+#===============================================================================
 # 7. Profiling with cProfile and visualization
-#=================================================================================
+#===============================================================================
 
 # Profiling is essential for understanding the performance characteristics of Python code.
 # The cProfile module provides a way to measure where time is being spent in your application.
@@ -440,9 +440,9 @@ with open('output_stats.txt', 'w') as f:
 # Additionally, profiling can introduce overhead, so be cautious about interpreting results from small datasets or brief execution times.
 
 
-#=================================================================================
+#===============================================================================
 # 8. Using tracemalloc for memory tracking
-#=================================================================================
+#===============================================================================
 
 # tracemalloc is a built-in Python library that helps track memory allocations.
 # It is particularly useful for identifying memory leaks and optimizing memory usage
@@ -499,9 +499,9 @@ for stat in top_stats[:10]:
 # Remember to disable tracemalloc with tracemalloc.stop() when you no longer need it to avoid 
 # unnecessary memory tracking and potential performance impacts.
 
-#=================================================================================
+#===============================================================================
 # 9. Debugging Multithreaded Applications
-#=================================================================================
+#===============================================================================
 
 # Multithreading allows concurrent execution of code, which can improve performance 
 # for I/O-bound tasks but introduces complexity in debugging due to shared state.
@@ -555,9 +555,9 @@ def main():
 # Thus, logging with clear messages is crucial for tracking down issues.
 
 
-#=================================================================================
+#===============================================================================
 # 10. Remote Debugging
-#=================================================================================
+#===============================================================================
 
 # Remote debugging allows developers to troubleshoot and diagnose issues in code that 
 # is running on a different machine or environment. This can be particularly useful 
